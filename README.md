@@ -6,16 +6,17 @@ A hub for all my online activities, such as posting recipes, photos, journaling,
 #### Post Types
 
 ###### mediaPost
-- _Media_: {array : media url} image, video, array of image/video
-- _caption_: {string} used as message/post on instagram/fb
-- _tags_: {array : string} not related to the hashtags in the caption. used for searching on the site, and for rough categorisation
-- _socialConnections_: {object : socialConnectionType} used for linking the post to its social media broadcast (ie. its instagram post, facebook post, etc.)
-  - _socialConnectionType_: {object} a key/value pair of social media outlet (eg. facebook) and the related post url, eg.
+- **Media**: {array : media url} image, video, array of image/video
+- **posterImage**: {string : media url} image to be used as preview image for video _(optional)_
+- **caption**: {string : media url} used as message/post on instagram/fb _(optional)_
+- **tags**: {array : tag string} not related to the hashtags in the caption. used for searching on the site, and for rough categorisation _(optional)_
+- **socialConnections**: {object : socialConnectionType} used for linking the post to its social media broadcast (ie. its instagram post, facebook post, etc.)
+  - **socialConnectionType**: {object} a key/value pair of social media outlet (eg. facebook) and the related post url, or false, eg.
 
   ```
   socialConections: {
     "facebook": "https://www.facebook.com/photo.php?fbid=10154826060369890",
-    "instagram": "https://www.instagram.com/p/BOhPx0fjJx7/"
+    "instagram": false
   }
   ```
 
@@ -51,7 +52,8 @@ A hub for all my online activities, such as posting recipes, photos, journaling,
     - [action] post to facebook
 
 ---
-  - [ ] notePost
+  - [x] notePost
+    - title
     - content (markdown)
     - tags
 
