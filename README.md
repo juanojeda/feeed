@@ -12,12 +12,14 @@ A hub for all my online activities, such as posting recipes, photos, journaling,
     - array of images/videos
     - caption
     - post to facebook
+
 ---
   - [ ] imagePost
     - image
     - caption
     - [action] post to instagram
     - [action] post to facebook
+
 ---
   - [ ] videoPost
     - video
@@ -25,10 +27,12 @@ A hub for all my online activities, such as posting recipes, photos, journaling,
     - caption
     - [action] post to instagram
     - [action] post to facebook
+
 ---
   - [ ] notePost
     - content (markdown)
     - tags
+    
 ---
   - [ ] CVPost
     - job metadata
