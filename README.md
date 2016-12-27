@@ -24,6 +24,9 @@ A hub for all my online activities, such as posting recipes, photos, journaling,
 
 ### data model
 -----
+- [ ] connect to contentful
+  - [ ] read data
+  - [ ] write data
 
 **post types**
 
