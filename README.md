@@ -6,12 +6,12 @@ A hub for all my online activities, such as posting recipes, photos, journaling,
 #### Post Types
 
 ###### mediaPost
-- **Media**: {array : media url} image, video, array of image/video
+- **media**: {array : media url} image, video, array of image/video
 - **posterImage**: {string : media url} image to be used as preview image for video _(optional)_
 - **caption**: {string : media url} used as message/post on instagram/fb _(optional)_
 - **tags**: {array : tag string} not related to the hashtags in the caption. used for searching on the site, and for rough categorisation _(optional)_
 - **socialConnections**: {object : socialConnectionType} used for linking the post to its social media broadcast (ie. its instagram post, facebook post, etc.)
-  - **socialConnectionType**: {object} a key/value pair of social media outlet (eg. facebook) and the related post url, or false, eg.
+  - **socialConnectionType**: {object : social connection kvp} a key/value pair of social media outlet (eg. facebook) and the related post url, or false, eg.
 
   ```
   socialConections: {
@@ -20,6 +20,10 @@ A hub for all my online activities, such as posting recipes, photos, journaling,
   }
   ```
 
+###### notePost
+- **title**: {string : post title} The title of the post
+- **content**: { string : markdown text } The content of the blog post or journal, in markdown format
+- **tags**: {array : tag string} used for searching on the site, and for rough categorisation _(optional)_
 
 ## todo
 
@@ -56,6 +60,15 @@ A hub for all my online activities, such as posting recipes, photos, journaling,
     - title
     - content (markdown)
     - tags
+
+---
+  - [ ] recipePost
+    - title
+    - blurb
+    - ingredients
+    - method
+    - tags
+    - images
 
 ---
   - [ ] CVPost
