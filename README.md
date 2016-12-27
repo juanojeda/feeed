@@ -32,7 +32,7 @@ A hub for all my online activities, such as posting recipes, photos, journaling,
   - [ ] notePost
     - content (markdown)
     - tags
-    
+
 ---
   - [ ] CVPost
     - job metadata
@@ -50,6 +50,7 @@ A hub for all my online activities, such as posting recipes, photos, journaling,
     - [ ] note only
     - [ ] grid layout
     - [ ] 1up layout
+    
 ---
   - [ ] create post
 
