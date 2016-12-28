@@ -62,7 +62,7 @@ A hub for all my online activities, such as posting recipes, photos, journaling,
     - tags
 
 ---
-  - [ ] recipePost
+  - [x] recipePost
     - title
     - blurb
     - ingredients
