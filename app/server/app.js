@@ -1,6 +1,9 @@
-const express = require('express');
-const morgan = require('morgan');
-const path = require('path');
+const express       = require('express');
+const morgan        = require('morgan');
+const path          = require('path');
+// TODO: figure out how to get express using ES6
+// TODO: figure out how to return a 404 with an unknown path
+// const RoutesConfig  = require('../src/routesConfig');
 
 const app = express();
 
