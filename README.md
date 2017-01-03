@@ -29,9 +29,13 @@ A hub for all my online activities, such as posting recipes, photos, journaling,
 
 ### data model
 -----
+- [ ] add env variables in VPS for API Key generation
+- [ ] set up node server on VPS
+- [ ] create OAuth key on node
 - [ ] connect to contentful
   - [ ] read data
   - [ ] write data
+  - [ ] cache data (? - nice to have)
 
 **post types**
 
@@ -89,10 +93,23 @@ A hub for all my online activities, such as posting recipes, photos, journaling,
     - [ ] 1up layout
 
 ---
-  - [ ] create post
+- [ ] CV
 
 ---
-  - [ ] CV
+
+**Create**
+
+  - [ ] Create media post
+    - [ ] Upload media
+    - [ ] Use device camera
+
+---
+  - [ ] Create note post
+
+---
+
+  - [ ] Create recipe post
+
 
 ---
 
