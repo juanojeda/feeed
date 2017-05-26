@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 
 class ContentTypeBlurb extends Component {
-  render() {
+  constructor(props) {
+    super(props);
+  }
 
+  render() {
     const { title, blurb } = this.props;
 
     return (

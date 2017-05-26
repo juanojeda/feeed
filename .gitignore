@@ -57,5 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# next-level stuff
+.next/
+
 #OS level stuff
 .DS_store

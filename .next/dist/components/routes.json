@@ -1,5 +1,0 @@
-[
-  { "key": "home",      "label": "Home",     "path": "/",        "title": "" },
-  { "key": "logo",      "label": "Logo",     "path": "/logo",    "title": "Logo" },
-  { "key": "recipes", "label": "Recipes", "path": "/recipes", "title": "Recipes" }
-]

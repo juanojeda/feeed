@@ -9,6 +9,7 @@ import EntriesStore from '../stores/entriesStore';
 
 import Layout from '../components/layout';
 import ContentTypeBlurb from '../components/molecules/contentTypeBlurb';
+import RecipesList from '../components/organisms/recipesList';
 
 const CONTENTFUL = {
   SPACE_ID              : '6gudwzhnyzfa',
@@ -41,21 +42,24 @@ class Contentful extends Component {
     const entries = new EntriesStore();
     const space = await initClient(CONTENTFUL.SPACE_ID, CONTENTFUL.ACCESS_TOKEN, false);
     const recipesType = await findContentType(CONTENT_TYPES.RECIPES);
-    const recipesEntries = await entries.fetchEntries().then((entries)=> {
+    const recipes = await entries.fetchEntries().then((entries)=> {
       // console.log(entries);
       return entries.allRecipes;
     });
 
-    return { recipesType, recipesEntries };
+    return { recipesType, recipes };
   }
   
   render() {
-    const { recipesType } = this.props;
+    const { recipesType, recipes } = this.props;
     const {name: title, description: blurb } = recipesType;
 
     return (
       <Layout title="recipes">
         <ContentTypeBlurb title={ title } blurb={ blurb } />
+
+        <RecipesList recipes={ recipes } />
+
       </Layout>
     )
   }

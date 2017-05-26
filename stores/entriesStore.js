@@ -36,7 +36,6 @@ class EntriesStore {
 
     if (matchedTypes) {
       return this.entries.filter((entry) => {
-        console.log(entry.sys.contentType);
         return entry.sys.contentType.sys.id === type;
       });
     } else {
