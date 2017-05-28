@@ -1,5 +1,5 @@
 [
   { "key": "home",      "label": "Home",     "path": "/",        "title": "" },
-  { "key": "logo",      "label": "Logo",     "path": "/logo",    "title": "Logo" },
-  { "key": "recipes", "label": "Recipes", "path": "/recipes", "title": "Recipes" }
+  { "key": "recipes", "label": "Recipes", "path": "/recipes", "title": "Recipes" },
+  { "key": "notes", "label": "Notes", "path": "/notes", "title": "Notes" }
 ]

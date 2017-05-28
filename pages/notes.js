@@ -6,9 +6,9 @@ import EntriesStore from '../stores/entriesStore';
 
 import Layout from '../components/layout';
 import ContentTypeBlurb from '../components/molecules/contentTypeBlurb';
-import RecipesList from '../components/organisms/recipesList';
+import NotesList from '../components/organisms/notesList';
 
-class Recipes extends Component {
+class Notes extends Component {
 
   constructor (props) {
     super(props);
@@ -25,28 +25,28 @@ class Recipes extends Component {
   }){
     const entriesStore = new EntriesStore();
     
-    let recipesType;
-    const recipes = await entriesStore.fetchEntries().then((entries)=> {
-      recipesType = entries.recipesType;
-      return entries.allRecipes;
+    let notesType;
+    const notes = await entriesStore.fetchEntries().then((entries)=> {
+      notesType = entries.notesType;
+      return entries.allNotes;
     });
 
-    return { recipesType, recipes };
+    return { notesType, notes };
   }
   
   render() {
-    const { recipesType, recipes } = this.props;
-    const {name: title, description: blurb } = recipesType;
+    const { notesType, notes } = this.props;
+    const {name: title, description: blurb } = notesType;
 
     return (
-      <Layout title="recipes">
+      <Layout title="notes">
         <ContentTypeBlurb title={ title } blurb={ blurb } />
 
-        <RecipesList recipes={ recipes } />
+        <NotesList notes={ notes } />
 
       </Layout>
     )
   }
 }
 
-export default Recipes;
+export default Notes;

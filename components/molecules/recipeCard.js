@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Nullable from '../atoms/nullable';
+import nullable from '../atoms/nullable';
 
 class RecipeCard extends Component {
   constructor(props) {
@@ -8,7 +8,7 @@ class RecipeCard extends Component {
   
   render() {
     const { fields, sys } = this.props.recipe;
-    const hasImages = fields.images;
+    const hasImages = !!fields.images;
     const img = hasImages ? fields.images[0] : null;
     return (
       <article>
@@ -16,13 +16,14 @@ class RecipeCard extends Component {
           <h3>{ fields.title }</h3>
         </header>
         
-        <Nullable test={ hasImages }>
           {
-            <div>
-              <img src={ img && img.fields.file.url } alt={ img && img.description } />
-            </div>
+            nullable(
+              <div>
+                <img src={ img && img.fields.file.url } alt={ img && img.description } />
+              </div>,
+              hasImages
+            )
           }
-        </Nullable> 
 
         <div>{ fields.blurb }</div>
 
