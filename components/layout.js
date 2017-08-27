@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import Link from 'next/link';
 import Head from 'next/head';
@@ -19,27 +19,39 @@ const getPageTitle = (title, routesArr) => {
   return pageTitle;
 };
 
-export default ({ children, title = 'index' }) => {
-  let pageTitle = getPageTitle(title, routes);
-  return (
-    <div>
-      <Head>
-        <title>{ pageTitle }</title>
-        <meta charSet='utf-8' />
-        <meta name='viewport' content='initial-scale=1.0,   width=device-width' />
-        <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
-        <link rel="stylesheet" type="text/css"  href="//fonts.googleapis.com/css?family=Open+Sans" />
-      </Head>
+class Layout extends Component {
 
-      <header>
-        <Navigation links={routes} activeLink={title} />
-      </header>
-    
-      { children }
-    
-      <footer>
-      I am a footer. I am here to stay.
-      </footer>
-    </div>
-  )
+  render(){
+
+    const {title, children} = this.props;
+    let pageTitle = getPageTitle(title, routes);
+
+    return (
+      <div>
+        <Head>
+          <title>{ pageTitle }</title>
+          <meta charSet='utf-8' />
+          <meta name='viewport' content='initial-scale=1.0,   width=device-width' />
+          <style dangerouslySetInnerHTML={{ __html: stylesheet }} />
+          <link rel="stylesheet" type="text/css"  href="//fonts.googleapis.com/css?family=Open+Sans" />
+        </Head>
+
+        <header>
+          <Navigation links={routes} activeLink={title} />
+        </header>
+      
+        { children }
+      
+        <footer>
+        I am a footer. I am here to stay.
+        </footer>
+      </div>
+    )
+  }
 }
+
+Layout.defaultProps = {
+  title: 'index',
+}
+
+export default Layout;
