@@ -1,0 +1,7 @@
+@import 'variables';
+.navigation {
+  &__wrapper {
+    font-weight: bold;
+    background: $yellow-color;
+  }
+}

@@ -1,6 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
 
+import styles from '../stylesheets/_navigation.scss';
+
 /**
 * Navigation component that takes a json config and renders navigation links.
 * Optional active property defines which link is active.
@@ -27,7 +29,7 @@ class Navigation extends React.Component {
     let classes   = 'navigation__item';
 
     return (
-      <nav>
+      <nav className={styles.navigation__wrapper}>
         <ul>
           { links.map((link) => {
             let isActive = activeLink === link.key;
