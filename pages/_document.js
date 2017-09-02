@@ -1,5 +1,5 @@
 import React from 'react';
-import Document, { Head, Main, NextScript } from 'next/document'
+import Document, { Head, Main, NextScript } from 'next/document';
 
 class MyDocument extends Document {
 
@@ -12,7 +12,7 @@ class MyDocument extends Document {
     return (
       <html>
         <Head>
-          <link rel='stylesheet' href='/static/css/bundle.css' />
+           <link rel='stylesheet' href='/static/css/bundle.css' /> 
         </Head>
         <body>
           {this.props.customValue}

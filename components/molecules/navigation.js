@@ -34,7 +34,11 @@ class Navigation extends React.Component {
           { links.map((link) => {
             let isActive = activeLink === link.key;
             return (
-              <li key={link.path} className={`${classes} ${isActive ? 'navigation__item--active':''}`}><Link href={link.path}><a>{link.label}</a></Link></li>
+              <li key={link.path}>
+                <Link href={link.path}>
+                  <a className={styles.navigation__link}>{link.label}</a>
+                </Link>
+              </li>
             )
           }) }
         </ul>

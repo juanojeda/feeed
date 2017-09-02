@@ -7,6 +7,7 @@ import Navigation from './molecules/navigation';
 import routes from './routes.json';
 
 import stylesheet from './stylesheets/global.scss';
+import Logo from './atoms/logo';
 
 const getPageTitle = (title, routesArr) => {
   let pageTitle = routesArr.filter((route)=>{
@@ -37,6 +38,7 @@ class Layout extends Component {
         </Head>
 
         <header>
+          <Logo />
           <Navigation links={routes} activeLink={title} />
         </header>
       

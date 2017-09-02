@@ -2,6 +2,9 @@
 .navigation {
   &__wrapper {
     font-weight: bold;
-    background: $yellow-color;
+    background: $header-background;
+  }
+  &__link {
+    color: $header-colour;
   }
 }
