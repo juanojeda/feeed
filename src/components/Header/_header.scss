@@ -1,0 +1,20 @@
+@import '../../sass/variables';
+@import '../../sass/functions';
+
+.header {
+  background: #fff;
+  padding: 0 $gutter-outer-sm;
+
+  @media screen and (#{$bp-small}) {
+    padding: 0 $gutter-outer;
+  }
+
+  a {
+    font-family: 'Domine', serif;
+    font-size: 0.8rem;
+    box-shadow: none;
+    color: $colour-grey-light;
+    display: inline-block;
+    padding: $y-unit $x-unit/2;
+  }
+}

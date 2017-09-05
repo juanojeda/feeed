@@ -1,0 +1,31 @@
+@import '../../sass/variables';
+@import '../../sass/functions';
+
+.logo {
+  color: $colour-white;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 1.25rem;
+  margin: 0 auto;
+  left: $gutter-outer;
+  position: absolute;
+  top: 0;
+  transition: 400ms ease all 100ms;
+  
+  &__background {
+    padding: 0.5rem;
+    height: get-col-width(1.5);
+    width: get-col-width(1.5);
+    background: $colour-black;
+  }
+
+  &__logotype {
+    position: absolute;
+    bottom: 0.5rem;
+  }
+
+  .headroom--unpinned & {
+    position: static;
+    margin-top: -#{get-col-width(1.5)};
+  }
+
+}

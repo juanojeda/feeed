@@ -1,14 +1,3 @@
 {
-  "presets": [
-    "next/babel"
-  ],
-  "plugins": [
-    "transform-decorators-legacy",
-    ["css-modules-transform", {
-        "extensions": [".css", ".scss"],
-        "append": [ "postcss-cssnext" ],
-        "extractCss": "./static/css/bundle.css",
-        "preprocessCss": "./util/pre-processor.js"
-      }]
-  ]
+    "plugins": ["lodash"]
 }

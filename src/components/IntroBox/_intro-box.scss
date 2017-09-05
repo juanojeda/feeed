@@ -1,0 +1,25 @@
+@import '../../sass/variables';
+@import '../../sass/functions';
+
+.intro-box {
+  background: $colour-primary-dark;
+  color: $colour-white;
+  padding-bottom: 3.5rem;
+  padding-top: 3.5rem;
+  
+  a {
+    color: $colour-primary-lighter;
+    &:hover,
+    &:focus {
+      background-color: fade-out($colour-primary-lighter, 0.75);
+    }
+  }
+
+  @media screen and (#{$bp-medium}) {
+    display: flex;
+    min-height: 100%;
+    padding: get-col-width(0.25);
+    align-content: center;
+    align-items: center;
+  }
+}

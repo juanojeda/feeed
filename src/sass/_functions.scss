@@ -1,0 +1,22 @@
+@import './variables';
+
+@function get-unit($units, $axis: 'x') {
+  @if ($axis == 'x') {
+    @return $units * $x-unit;
+  }
+  @else if ($axis == 'y') {
+    @return $units * $y-unit;
+  }
+}
+
+@function get-x($units: 1){
+  @return get-unit($units, 'x');
+}
+
+@function get-y($units: 1){
+  @return get-unit($units, 'y');
+}
+
+@function get-col-width($cols: 1){
+  @return $cols * $column-width;
+}

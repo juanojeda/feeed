@@ -1,0 +1,9 @@
+@import '../../sass/variables';
+@import '../../sass/functions';
+
+.content-box {
+  min-height: 100%;
+  @media screen and (#{$bp-medium}) {
+    
+  }
+}

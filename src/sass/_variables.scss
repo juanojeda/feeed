@@ -1,0 +1,40 @@
+//  COLOURS
+// ================================
+
+$colour-primary:            #991D4E;
+$colour-primary-light:      #E076A1;
+$colour-primary-lighter:    #FCC7DC;
+$colour-primary-dark:       #631233;
+
+$colour-secondary:          #3C91E6;
+$colour-secondary-light:    #CCE5FF;
+$colour-secondary-lighter:  #9AC7F4;
+$colour-secondary-dark:     #13304C;
+
+$colour-tertiary:           #00AD68;
+$colour-tertiary-light:     #78E8B4;
+$colour-tertiary-dark:      #004C3B;
+
+$colour-black:              #161E1A;
+$colour-grey-dark:          #3B4749;
+$colour-grey-base:          #485B5E;
+$colour-grey-light:         #8CA0A3;
+$colour-white:              #EDF3F4;
+
+//  SPACING & LAYOUT
+// =================================
+
+$gutter-outer-sm: 1rem;
+$gutter-outer: 2rem;
+$gutter-inner: 2rem;
+$reading-width: 42rem;
+$column-width: $reading-width / 12;
+$x-unit: 1rem;
+$y-unit: 1rem;
+$header-height: (2*$y-unit) + (1.4rem); // header padding + font size + link padding
+
+
+//  BREAKPOINTS
+// =================================
+$bp-small: 'min-width: 27.5rem';
+$bp-medium: 'min-width: 60rem';
