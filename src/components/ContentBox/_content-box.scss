@@ -3,7 +3,5 @@
 
 .content-box {
   min-height: 100%;
-  @media screen and (#{$bp-medium}) {
-    
-  }
+  padding: 2rem 0;
 }

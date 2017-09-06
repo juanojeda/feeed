@@ -24,5 +24,6 @@ a {
   &:focus {
     background: fade-out($colour-secondary-lighter, 0.75);
     box-shadow: 0 2px currentColor;
+    outline: none;
   }
 }

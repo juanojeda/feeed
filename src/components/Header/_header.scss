@@ -2,7 +2,8 @@
 @import '../../sass/functions';
 
 .header {
-  background: #fff;
+  background: $colour-real-white;
+  border-top: 4px solid $colour-primary;
   padding: 0 $gutter-outer-sm;
 
   @media screen and (#{$bp-small}) {
@@ -16,5 +17,12 @@
     color: $colour-grey-light;
     display: inline-block;
     padding: $y-unit $x-unit/2;
+    &:hover,
+    &:focus,
+    &:active {
+      box-shadow: 0 1px 2px fade-out($colour-black, .75);
+      color: $colour-secondary;
+      transform: translateY(-1px);
+    }
   }
 }
