@@ -6,7 +6,6 @@ import Header from '../components/Header/Header';
 import IntroBox from '../components/IntroBox/IntroBox';
 import ContentBox from '../components/ContentBox/ContentBox';
 
-import config from '../../data/SiteConfig';
 import './_base.scss';
 import '../sass/_layout.scss';
 
@@ -21,9 +20,6 @@ class Index extends React.Component {
   render() {
     return (
       <div className='index-container'>
-        <Helmet title={config.siteTitle} />
-        <Header />
-
         <div className='l-flex'>
           <div className="l-flex-item">
             <IntroBox
