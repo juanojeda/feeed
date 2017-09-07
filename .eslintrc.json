@@ -7,7 +7,8 @@
     "react/no-danger": "off",
     "react/jsx-filename-extension": "off",
     "react/jsx-closing-bracket-location": "off",
-    "react/no-unescaped-entities": "off"
+    "react/no-unescaped-entities": "off",
+    "class-methods-use-this": "off"
   },
   "settings": {
     "import/core-modules": []

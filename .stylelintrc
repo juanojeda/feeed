@@ -3,6 +3,7 @@
     "rules": {
         "indentation": 2,
         "no-missing-end-of-source-newline": null,
-        "no-eol-whitespace": null
+        "no-eol-whitespace": null,
+        "number-leading-zero": null
     }
 }
