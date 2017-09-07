@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import Link from 'gatsby-link';
+
 import './_logo.scss';
 
 class Logo extends Component {
@@ -8,9 +10,11 @@ class Logo extends Component {
     return (
       <h1 className="logo">
         <div className="logo__background">
-          <div className="logo__logotype">
-            Juan Ojeda
-          </div>
+          <Link to="/">
+            <div className="logo__logotype">
+              Juan Ojeda
+            </div>
+          </Link>
         </div>
       </h1>
     );

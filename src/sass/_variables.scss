@@ -39,3 +39,7 @@ $header-height: (2*$y-unit) + (1.4rem); // header padding + font size + link pad
 // =================================
 $bp-small: 'min-width: 27.5rem';
 $bp-medium: 'min-width: 60rem';
+
+//  ANIMATIONS
+// =================================
+$global-transition: 200ms ease;

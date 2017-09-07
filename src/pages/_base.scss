@@ -4,12 +4,13 @@
 body {
   background: $colour-white;
 }
+
 .container {
   margin: 0 auto;
   max-width: $reading-width;
   padding-left: $gutter-outer-sm;
   padding-right: $gutter-outer-sm;
-  
+
   @media screen and (#{$bp-small}) {
     padding-left: $gutter-outer;
     padding-right: $gutter-outer;
@@ -20,9 +21,10 @@ a {
   color: $colour-secondary;
   box-shadow: 0 1px currentColor;
   transition: 200ms ease all;
+
   &:hover,
   &:focus {
-    background: fade-out($colour-secondary-lighter, 0.75);
+    background: fade-out($colour-secondary-lighter, .75);
     box-shadow: 0 2px currentColor;
     outline: none;
   }
