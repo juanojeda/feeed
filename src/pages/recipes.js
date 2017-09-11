@@ -1,74 +1,33 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import moment from 'moment';
-
 import IntroBox from '../components/IntroBox/IntroBox';
 import ContentBox from '../components/ContentBox/ContentBox';
+import RecipeCard from '../components/Recipes/RecipeCard';
 
 import '../sass/_layout.scss';
+import '../components/Recipes/_recipe-card.scss';
 
 class RecipeList extends Component {
 
   recipeListHTML(){
-    const { edges: recipes } = this.props.data.allMarkdownRemark;
-    return recipes.map((recipeData) => {
-      const { node: recipe } = recipeData;
-      const {
-        title,
-        blurb,
-        date,
-        difficulty,
-        tags,
-        id: postId } = recipe.frontmatter;
-
-      return (
-        <div className="recipe-card" key={postId}>
-          <h2>{title}</h2>
-          <p>published on { moment(date).format('dddd, MMMM Do YYYY') }</p>
-          <p>difficulty: {difficulty} / 5</p>
-          <p>{blurb}</p>
-          <div>
-            <ul>
-              {
-                tags.map((tag)=>{
-                  return (
-                    <li key={tag}>{tag}</li>
-                  )
-                })
-              }
-            </ul>
-          </div>
-        </div>
-      );
-    });
   }
-
+  
   render() {
+    const { edges: recipes } = this.props.data.allMarkdownRemark;
     return (
       <div>
         <div className='allrecipes-container'>
-          <div className='l-flex'>
-            <div className="l-flex-item">
-              <IntroBox
-                className='l-flex-item'
-                heading="Recipes">
-                Some recipes
-              </IntroBox>
+          <IntroBox heading="Recipes" />
+          <ContentBox>
+            <div className='container l-flex'>
+              {
+                recipes.map((recipeData) => (
+                  <RecipeCard key={recipeData.node.id} data={recipeData.node} />
+                ))
+              }
             </div>
-            <div className="l-flex-item">
-              <ContentBox
-                className='l-flex-item'>
-                <div className='container'>
-                  {
-                    this.recipeListHTML()
-                  }
-                </div>
-              </ContentBox>
-            </div>
-
-          </div>
-
+          </ContentBox>
 
         </div>
       </div>
@@ -96,7 +55,6 @@ export const pageQuery = graphql`
       edges {
         node {
           id
-          timeToRead
           frontmatter {
             blurb
             date
@@ -104,6 +62,9 @@ export const pageQuery = graphql`
             id
             tags
             title
+          }
+          fields {
+            slug
           }
         }
       }

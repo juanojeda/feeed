@@ -1,0 +1,68 @@
+@import '../../sass/_variables';
+
+.recipe-difficulty {
+  &__container {
+    background: $colour-secondary-light;
+    height: .25rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+  &__bar {
+    height: 100%;
+
+    &:before {
+      content: '';
+      background-image:
+        linear-gradient( to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) calc(21% - 1.5px),
+        rgba(255, 255, 255, 1) calc(21% - 1.5px),
+        rgba(255, 255, 255, 1) 21%,
+        rgba(255, 255, 255, 0) 21%,
+        rgba(255, 255, 255, 0) calc(41% - 1.5px),
+        rgba(255, 255, 255, 1) calc(41% - 1.5px),
+        rgba(255, 255, 255, 1) 41%,
+        rgba(255, 255, 255, 0) 41%,
+        rgba(255, 255, 255, 0) calc(61% - 1.5px),
+        rgba(255, 255, 255, 1) calc(61% - 1.5px),
+        rgba(255, 255, 255, 1) 61%,
+        rgba(255, 255, 255, 0) 61%,
+        rgba(255, 255, 255, 0) calc(81% - 1.5px),
+        rgba(255, 255, 255, 1) calc(81% - 1.5px),
+        rgba(255, 255, 255, 1) 81%,
+        rgba(255, 255, 255, 0) 81%
+      );
+      display: block;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+    }
+  }
+
+  &--rating-1 {
+    background-color: $colour-rating-1;
+    width: 20%;
+  }
+
+  &--rating-2 {
+    background-color: $colour-rating-2;
+    width: 40%;
+  }
+  
+  &--rating-3 {
+    background-color: $colour-rating-3;
+    width: 60%;
+  }
+
+  &--rating-4 {
+    background-color: $colour-rating-4;
+    width: 80%;
+  }
+
+  &--rating-5 {
+    background-color: $colour-rating-5;
+    width: 100%;
+  }
+}

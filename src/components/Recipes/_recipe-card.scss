@@ -1,0 +1,27 @@
+@import '../../sass/variables';
+
+.recipe-card {
+  background: $colour-real-white;
+  border-radius: .25rem;
+  box-shadow: 0 0 0 0 fade-out($colour-secondary, .9);
+  color: $colour-black;
+  cursor: pointer;
+  height: 100%;
+  padding: 1.5rem;
+  margin: 1rem;
+  overflow: hidden;
+  position: relative;
+  transition-duration: 100ms;
+  transition-timing-function: ease-out;
+  transition-property: transform box-shadow;
+
+  &:hover,
+  &:focus {
+    transform: translateY(-0.125rem);
+    box-shadow: 0 0 0 0.125rem $colour-secondary-light;
+  }
+
+  &:active {
+    box-shadow: 0 0 0 0.25rem $colour-secondary;
+  }
+}

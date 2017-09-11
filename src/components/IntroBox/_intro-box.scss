@@ -19,7 +19,6 @@
   @media screen and (#{$bp-medium}) {
     display: flex;
     min-height: 100%;
-    padding: get-col-width(0.25);
     align-content: center;
     align-items: center;
   }

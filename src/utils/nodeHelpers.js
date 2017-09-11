@@ -12,18 +12,18 @@ exports.getSlugName = (fileNode, node) => {
   if (
     hasFrontMatterProperty(node, 'slug')
   ) {
-    slug = `/${_.kebabCase(node.frontmatter.slug)}`;
+    slug = `${_.kebabCase(node.frontmatter.slug)}`;
   }
   if (
     hasFrontMatterProperty(node, 'title')
   ) {
-    slug = `/${_.kebabCase(node.frontmatter.title)}`;
+    slug = `${_.kebabCase(node.frontmatter.title)}`;
   } else if (parsedFilePath.name !== 'index' && parsedFilePath.dir !== '') {
-    slug = `/${parsedFilePath.dir}/${parsedFilePath.name}/`;
+    slug = `${parsedFilePath.dir}/${parsedFilePath.name}/`;
   } else if (parsedFilePath.dir === '') {
-    slug = `/${parsedFilePath.name}/`;
+    slug = `${parsedFilePath.name}/`;
   } else {
-    slug = `/${parsedFilePath.dir}/`;
+    slug = `${parsedFilePath.dir}/`;
   }
   return slug;
 };

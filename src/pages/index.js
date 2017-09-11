@@ -8,6 +8,7 @@ import './_base.scss';
 import '../sass/_layout.scss';
 
 class Index extends React.Component {
+
   introBoxBodyHtml(){
     return (
       <p>
@@ -15,18 +16,19 @@ class Index extends React.Component {
       </p>
     )
   }
+  
   render() {
     return (
-      <div className='index-container'>
+      <div className='l-full-height'>
         <div className='l-flex'>
-          <div className="l-flex-item">
+          <div className="l-flex-item--2up">
             <IntroBox
               className='l-flex-item'
               heading={`Hello, I'm Juan :)`}>
               {this.introBoxBodyHtml()}
             </IntroBox>
           </div>
-          <div className="l-flex-item">
+          <div className="l-flex-item--2up">
             <ContentBox
               className='l-flex-item'>
               <div className='container'>

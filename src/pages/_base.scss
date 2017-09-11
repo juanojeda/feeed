@@ -7,13 +7,11 @@ body {
 
 .container {
   margin: 0 auto;
-  max-width: $reading-width;
   padding-left: $gutter-outer-sm;
   padding-right: $gutter-outer-sm;
 
-  @media screen and (#{$bp-small}) {
-    padding-left: $gutter-outer;
-    padding-right: $gutter-outer;
+  &--reading-width {
+    max-width: $reading-width;
   }
 }
 

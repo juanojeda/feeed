@@ -2,19 +2,31 @@
 
 .l-flex {
   @media screen and (#{$bp-medium}) {
+    align-items: stretch;
     bottom: 0;
     display: flex;
-    align-items: stretch;
-    padding: (2 * $y-unit) (2 * $x-unit);
-    position: absolute;
-    top: $header-height;
+    height: 100%;
   }
 
-  .l-flex-item {
+  .l-flex-item--2up {
     @media screen and (#{$bp-medium}) {
       flex-basis: 50%;
       flex-grow: 0;
       flex-shrink: 0;
     }
   }
+
+  .l-flex-item--3up {
+    @media screen and (#{$bp-medium}) {
+      flex-basis: (1 / 3 * 100%);
+      flex-grow: 0;
+      flex-shrink: 0;
+    }
+  }
+}
+
+.l-full-height {
+  position: absolute;
+  top: $header-height;
+  bottom: 0;
 }

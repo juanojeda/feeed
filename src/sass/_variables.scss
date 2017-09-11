@@ -20,7 +20,16 @@ $colour-grey-dark:          #3B4749;
 $colour-grey-base:          #485B5E;
 $colour-grey-light:         #8CA0A3;
 $colour-white:              #EDF3F4;
+$colour-grey-lighter:       mix($colour-grey-light, $colour-white, 25%);
 $colour-real-white:         #fff;
+
+$colour-rating-1:           #00D660;
+$colour-rating-2:           #CFD600;
+$colour-rating-3:           #FF9D00;
+$colour-rating-4:           #F45618;
+$colour-rating-5:           #D60031;
+
+
 
 //  SPACING & LAYOUT
 // =================================
