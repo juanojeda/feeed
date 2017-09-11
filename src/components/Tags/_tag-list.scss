@@ -1,0 +1,17 @@
+@import '../../sass/variables';
+
+.tag-list {
+  &,
+  &__tag {
+    display: inline-block;
+    margin: 0;
+  }
+
+  &__tag {
+    background: $colour-real-white;
+    color: $colour-secondary-dark;
+    font-size: 80%;
+    margin-right: .5rem;
+    padding: 0.125rem .25rem;
+  }
+}

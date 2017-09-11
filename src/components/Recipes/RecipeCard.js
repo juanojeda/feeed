@@ -5,6 +5,7 @@ import moment from 'moment';
 
 import Link from 'gatsby-link';
 import RecipeDifficulty from './RecipeDifficulty';
+import TagList from '../Tags/TagList';
 
 class RecipeCard extends Component {
   render() {
@@ -18,25 +19,23 @@ class RecipeCard extends Component {
     const { slug } = fields;
 
     return (
-      <div className="l-flex-item--3up">
-        <Link to={`recipes/${slug}`}>
-          <div className="recipe-card">
+      <article className="recipe-card l-flex-item--3up" tabIndex="0">
+        <div className="l-flex">
+          <Link to={`recipes/${slug}`}>
+            <header className="recipe-card__header">
+              <h3 className="recipe-card__title">{title}</h3>
+              <small className="recipe-card__date">published on {moment(date).format('dddd, MMMM Do YYYY')}</small>
+            </header>
+            <section className="recipe-card__body">
+              <p>{blurb}</p>
+            </section>
+          </Link>
+          <footer className="recipe-card__footer">
+            <TagList tags={tags} />
             <RecipeDifficulty difficulty={difficulty} />
-            <h3>{title}</h3>
-            <small>published on {moment(date).format('dddd, MMMM Do YYYY')}</small>
-            <p>{blurb}</p>
-            <div>
-              <ul>
-                {
-                  tags.map((tag) => (
-                    <li key={tag}>{tag}</li>
-                  ))
-                }
-              </ul>
-            </div>
-          </div>
-        </Link>
-      </div>
+          </footer>
+        </div>
+      </article>
     );
   }
 }

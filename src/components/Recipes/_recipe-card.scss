@@ -4,24 +4,59 @@
   background: $colour-real-white;
   border-radius: .25rem;
   box-shadow: 0 0 0 0 fade-out($colour-secondary, .9);
-  color: $colour-black;
   cursor: pointer;
-  height: 100%;
-  padding: 1.5rem;
   margin: 1rem;
   overflow: hidden;
   position: relative;
   transition-duration: 100ms;
-  transition-timing-function: ease-out;
   transition-property: transform box-shadow;
+  transition-timing-function: ease-out;
+
+  a {
+    box-shadow: none;
+    color: $colour-black;
+    &:hover,
+    &:focus {
+      background: inherit;
+    }
+  }
 
   &:hover,
   &:focus {
-    transform: translateY(-0.125rem);
     box-shadow: 0 0 0 0.125rem $colour-secondary-light;
+    outline: 0;
+    transform: translateY(-0.125rem);
   }
 
   &:active {
     box-shadow: 0 0 0 0.25rem $colour-secondary;
+  }
+
+  &__header,
+  &__body,
+  &__footer {
+    flex: 0 0 100%;
+  }
+
+  &__header {
+    padding: 1.5rem 1.5rem 1rem;
+  }
+  
+  &__title {
+    margin-bottom: .55rem;
+  }
+  
+  &__body {
+    padding: 1rem 1.5rem;
+  }
+  
+  &__footer {
+    align-self: flex-end;
+    background: mix($colour-white, $colour-real-white);
+    padding: 1rem 1.5rem 1.5rem;
+  }
+
+  &__date {
+    color: $colour-grey-light;
   }
 }
