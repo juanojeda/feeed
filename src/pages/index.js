@@ -1,8 +1,6 @@
 import React from 'react';
 
 import Link from 'gatsby-link';
-import Helmet from 'react-helmet';
-import Header from '../components/Header/Header';
 import IntroBox from '../components/IntroBox/IntroBox';
 import ContentBox from '../components/ContentBox/ContentBox';
 
@@ -37,10 +35,7 @@ class Index extends React.Component {
               </div>
             </ContentBox>
           </div>
-
         </div>
-
-
       </div>
     );
   }

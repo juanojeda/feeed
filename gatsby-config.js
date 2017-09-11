@@ -33,13 +33,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-source-contentful`,
-      options: {
-        spaceId: `6gudwzhnyzfa`,
-        accessToken: `0a0236e09641790c4a16872fe54978a3acffa547640245a6538349b7b0085af1`,
-      },
-    },
-    {
       resolve: "gatsby-transformer-remark",
       options: {
         plugins: [

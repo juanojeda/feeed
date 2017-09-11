@@ -10,19 +10,10 @@ const propTypes = {
 
 class RecipeTemplate extends React.Component {
   render() {
-    const recipe = this.props.data.contentfulRecipe
-    console.log(recipe)
-    const {
-      productName: { productName },
-      productDescription,
-      price,
-      image,
-      brand,
-      categories,
-    } = recipe
+    const recipe = this.props.data
     return (
       <div>
-        Recipe {recipe.id}
+        Recipe {recipe}
       </div>
     )
   }

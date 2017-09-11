@@ -1,6 +1,6 @@
 ---
 title: "KFC secret herbs & spices blend"
-id: "VJ8olkKY7"
+id: "NJtkq6AYX"
 blurb: "This might be the original, 11 secret herbs and spices, in the correct ratios, according to a leak from one of the Sanders' family members!"
 type: "recipe"
 tags: ["spices", "rubs",]

@@ -4,6 +4,7 @@
         "indentation": 2,
         "no-missing-end-of-source-newline": null,
         "no-eol-whitespace": null,
-        "number-leading-zero": null
+        "number-leading-zero": null,
+        "declaration-block-no-redundant-longhand-properties": null
     }
 }

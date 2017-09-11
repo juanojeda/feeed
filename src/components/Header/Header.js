@@ -16,11 +16,10 @@ import './_header.scss';
 class Header extends Component {
 
   getActiveLinkClass(path, route){
-    let activeLink = find(routesRegex, (val, exp)=>{
+    const activeLink = find(routesRegex, (val, exp)=>{
       const regex = new RegExp(exp);
       return path.match(regex);
     });
-    console.log(path, route);
     const activeClass = activeLink === route ? 'link--active' : '';
     
     return activeClass;
