@@ -56,6 +56,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         result.data.allMarkdownRemark.edges.forEach(edge => {
           const slug = edge.node.fields.slug;
           const type = edge.node.frontmatter.type;
+          const PostID = edge.node.frontmatter.id;
           let component;
   
           if (type === 'recipe') {
@@ -74,7 +75,8 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
             path: `/${type}s/${slug}`, // pluralise the type
             component,
             context: {
-              slug
+              slug,
+              PostID
             }
           });
         });

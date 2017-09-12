@@ -8,6 +8,7 @@
     "react/jsx-filename-extension": "off",
     "react/jsx-closing-bracket-location": "off",
     "react/no-unescaped-entities": "off",
+    "react/no-multi-comp": "off",
     "class-methods-use-this": "off"
   },
   "settings": {

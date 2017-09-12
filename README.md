@@ -68,103 +68,10 @@ ingredients: [
 
 ## todo
 
-### data model
------
-- [ ] add env variables in VPS for API Key generation
-- [ ] set up node server on VPS
-- [ ] create OAuth key on node
-- [ ] connect to contentful
-  - [ ] read data
-  - [ ] write data
-  - [ ] cache data (? - nice to have)
+- [ ] Add Foundation XY grid
 
-**post types**
+### Recipes
 
-  - [x] albumPost (covered by mediaPost)
-    - array of images/videos
-    - caption
-    - post to facebook
-
----
-  - [x] imagePost (covered by mediaPost)
-    - image
-    - caption
-    - [action] post to instagram
-    - [action] post to facebook
-
----
-  - [x] videoPost (covered by mediaPost)
-    - video
-    - posterImage
-    - caption
-    - [action] post to instagram
-    - [action] post to facebook
-
----
-  - [x] notePost
-    - title
-    - content (markdown)
-    - tags
-
----
-  - [x] recipePost
-    - title
-    - blurb
-    - ingredients
-    - method
-    - tags
-    - images
-
----
-  - [ ] CVPost
-    - job metadata
-    - tbd
-
-
-### page content
-----
-
-**page templates**
-
-  - [ ] post feed
-    - [ ] video only
-    - [ ] image only
-    - [ ] note only
-    - [ ] grid layout
-    - [ ] 1up layout
-
----
-- [ ] CV
-
----
-
-**Create**
-
-  - [ ] Create media post
-    - [ ] Upload media
-    - [ ] Use device camera
-
----
-  - [ ] Create note post
-
----
-
-  - [ ] Create recipe post
-
-
----
-
-**Components**
-
-  - [ ] image tile
-
----
-  - [ ] video tile
-
----
-  - [ ] note tile/small module
-
----
-  - [ ] album preview
-
----
+- [ ] extend recipe ingredients
+  - [ ] pluralisation
+  - [ ] db matching
