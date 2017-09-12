@@ -12,7 +12,7 @@ class Index extends React.Component {
   introBoxBodyHtml(){
     return (
       <p>
-        Welcome to my corner of the internets! If you like things like <Link to='/'>food photography</Link> (and puns!), <Link to='/'>recipes</Link>, <Link to='/'>web development</Link>, and <Link to='/'>general banter</Link>, you've come to the right place.
+        Welcome to my corner of the internets! If you like things like <Link to='/'>food photography</Link> (and puns!), <Link to='/recipes'>recipes</Link>, <Link to='/'>web development</Link>, and <Link to='/'>general banter</Link>, you've come to the right place.
       </p>
     )
   }
