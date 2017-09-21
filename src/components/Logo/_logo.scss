@@ -2,55 +2,55 @@
 @import '../../sass/functions';
 
 .logo {
-  margin: 0 auto;
   left: $gutter-outer;
+  margin: 0 auto;
   position: absolute;
   top: 0;
   transition: 400ms ease all 100ms;
-  
-  a,
-  a:hover,
-  a:visited,
-  a:focus {
-    background: transparent;
-    box-shadow: none;
-    color: $colour-white;
-    display: block;
-    font-family: 'Quicksand', sans-serif;
-    font-size: 1.25rem;
-    height: 100%;
-    padding: 0.5rem;
-    width: 100%;
+
+  a {
+    &,
+    &:hover,
+    &:visited,
+    &:focus {
+      background: transparent;
+      box-shadow: none;
+      color: $colour-grey-white;
+      display: block;
+      font-family: 'Quicksand', sans-serif;
+      font-size: 1.25rem;
+      height: 100%;
+      padding: 0.5rem;
+      width: 100%;
+    }
   }
-  
+
   &__background {
-    background: $colour-black;
+    background: $colour-grey-black;
     height: get-col-width(1.5);
     transition: $global-transition background;
     width: get-col-width(1.5);
-    
   }
-  
-  
+
   &__logotype {
+    bottom: .5rem;
     position: absolute;
-    bottom: 0.5rem;
-    transition: $global-transition color;    
+    transition: $global-transition color;
   }
-  
+
   .headroom--unpinned & {
-    position: static;
     margin-top: -#{get-col-width(1.5)};
+    position: static;
   }
 
   &:hover {
     .logo__background {
-      color: $colour-real-white;
       background-color: $colour-primary;
+      color: $colour-real-white;
     }
+
     .logo__logotype {
       color: $colour-real-white;
     }
   }
-
 }

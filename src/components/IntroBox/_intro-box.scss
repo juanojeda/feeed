@@ -2,24 +2,25 @@
 @import '../../sass/functions';
 
 .intro-box {
-  background: $colour-secondary-dark;
-  color: $colour-white;
-  padding-bottom: 3.5rem;
-  padding-top: 3.5rem;
-  
-  a {
-    color: $colour-secondary-lighter;
-    &:hover,
-    &:focus {
-      color: $colour-white;
-      background-color: fade-out($colour-secondary-lighter, 0.75);
-    }
-  }
-
   @media screen and (#{$bp-medium}) {
-    display: flex;
-    min-height: 100%;
     align-content: center;
     align-items: center;
+    display: flex;
+    min-height: 100%;
+  }
+  background: $colour-secondary-3;
+  color: $colour-grey-white;
+  height: 100%;
+  padding-bottom: 3.5rem;
+  padding-top: 3.5rem;
+
+  a {
+    color: $colour-secondary-2;
+
+    &:hover,
+    &:focus {
+      background-color: fade-out($colour-secondary-2, 0.75);
+      color: $colour-grey-white;
+    }
   }
 }

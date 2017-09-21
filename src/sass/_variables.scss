@@ -1,53 +1,57 @@
+// stylelint-disable
+
 //  COLOURS
 // ================================
 
-$colour-primary:            #991D4E;
-$colour-primary-light:      #E076A1;
-$colour-primary-lighter:    #FCC7DC;
-$colour-primary-dark:       #631233;
+$colour-primary:      #991d4e;
+$colour-primary-1:    #e076a1;
+$colour-primary-2:    #fcc7dc;
+$colour-primary-3:    #631233;
 
-$colour-secondary:          #3C91E6;
-$colour-secondary-light:    #CCE5FF;
-$colour-secondary-lighter:  #9AC7F4;
-$colour-secondary-dark:     #286199;
-$colour-secondary-darker:   #13304C;
+$colour-secondary:    #3c91e6;
+$colour-secondary-1:  #cce5ff;
+$colour-secondary-2:  #9ac7f4;
+$colour-secondary-3:  #286199;
+$colour-secondary-4:  #13304c;
 
-$colour-tertiary:           #00AD68;
-$colour-tertiary-light:     #78E8B4;
-$colour-tertiary-dark:      #004C3B;
+$colour-tertiary:     #00ad68;
+$colour-tertiary-1:   #78e8b4;
+$colour-tertiary-2:   #004c3b;
 
-$colour-black:              #161E1A;
-$colour-grey-dark:          #3B4749;
-$colour-grey-base:          #485B5E;
-$colour-grey-light:         #8CA0A3;
-$colour-white:              #EDF3F4;
-$colour-grey-lighter:       mix($colour-grey-light, $colour-white, 25%);
-$colour-real-white:         #fff;
+$colour-grey-black:   #161e1a;
+$colour-grey-1:       #3b4749;
+$colour-grey-2:       #485b5e;
+$colour-grey-3:       #8ca0a3;
+$colour-grey-white:   #edf3f4;
+$colour-grey-lighter: mix($colour-grey-3, $colour-grey-white, 25%);
 
-$colour-rating-1:           #00D660;
-$colour-rating-2:           #CFD600;
-$colour-rating-3:           #FF9D00;
-$colour-rating-4:           #F45618;
-$colour-rating-5:           #D60031;
+$colour-real-white:   #fff;
+
+$colour-rating-1:     #00d660;
+$colour-rating-2:     #cfd600;
+$colour-rating-3:     #ff9d00;
+$colour-rating-4:     #f45618;
+$colour-rating-5:     #d60031;
 
 //  SPACING & LAYOUT
 // =================================
 
 $gutter-outer-sm: 1rem;
-$gutter-outer: 2rem;
-$gutter-inner: 2rem;
-$reading-width: 42rem;
-$column-width: $reading-width / 12;
-$x-unit: 1rem;
-$y-unit: 1rem;
-$header-height: (2*$y-unit) + (1.4rem); // header padding + font size + link padding
-
+$gutter-outer:    2rem;
+$gutter-inner:    2rem;
+$reading-width:   42rem;
+$column-width:    $reading-width / 12;
+$x-unit:          1rem;
+$y-unit:          1rem;
+$header-height:   (2 * $y-unit) + (1.4rem); // header padding + font size + link padding
 
 //  BREAKPOINTS
 // =================================
-$bp-small: 'min-width: 27.5rem';
+$bp-small:  'min-width: 27.5rem';
 $bp-medium: 'min-width: 60rem';
 
 //  ANIMATIONS
 // =================================
 $global-transition: 200ms ease;
+
+// style-lint enable

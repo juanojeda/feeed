@@ -5,7 +5,6 @@ import IntroBox from '../components/IntroBox/IntroBox';
 import ContentBox from '../components/ContentBox/ContentBox';
 
 import './_base.scss';
-import '../sass/_layout.scss';
 
 class Index extends React.Component {
 
@@ -19,24 +18,22 @@ class Index extends React.Component {
   
   render() {
     return (
-      <div className='l-full-height'>
-        <div className='l-flex'>
-          <div className="l-flex-item--2up">
-            <IntroBox
-              className='l-flex-item'
-              heading={`Hello, I'm Juan :)`}>
-              {this.introBoxBodyHtml()}
-            </IntroBox>
-          </div>
-          <div className="l-flex-item--2up">
-            <ContentBox
-              className='l-flex-item'>
-              <div className='container'>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, eius placeat dolor sapiente quod nostrum? Autem aperiam in dolores ut, tempora cumque eum itaque. A iure illum maxime eaque libero.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt inventore sit ipsam iure in quis, laudantium, ullam labore, expedita quaerat magni officiis veniam ab distinctio dolor architecto modi obcaecati ducimus!</p>
-              </div>
-            </ContentBox>
-          </div>
+      <div className='cell auto grid-x'>
+        <div className="cell medium-6">
+          <IntroBox
+            className=''
+            heading={`Hello, I'm Juan :)`}>
+            {this.introBoxBodyHtml()}
+          </IntroBox>
+        </div>
+        <div className="cell medium-6">
+          <ContentBox
+            className=''>
+            <div className='container'>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, eius placeat dolor sapiente quod nostrum? Autem aperiam in dolores ut, tempora cumque eum itaque. A iure illum maxime eaque libero.</p>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt inventore sit ipsam iure in quis, laudantium, ullam labore, expedita quaerat magni officiis veniam ab distinctio dolor architecto modi obcaecati ducimus!</p>
+            </div>
+          </ContentBox>
         </div>
       </div>
     );

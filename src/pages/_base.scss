@@ -1,8 +1,12 @@
 @import '../sass/variables';
-@import '../sass/_functions';
+@import '../sass/functions';
+@import '../../node_modules/foundation-sites/scss/foundation';
+@import '../../node_modules/foundation-sites/scss/xy-grid/xy-grid';
+
+@include foundation-xy-grid-classes;
 
 body {
-  background: $colour-white;
+  background: $colour-grey-white;
 }
 
 .container {
@@ -16,9 +20,11 @@ body {
 }
 
 a {
-  color: $colour-secondary;
   box-shadow: 0 1px currentColor;
-  transition: 200ms ease all;
+  color: $colour-secondary;
+  transition-duration: 200ms;
+  transition-property: color box-shadow;
+  transition-timing-function: ease-in;
 
   &:hover,
   &:focus {

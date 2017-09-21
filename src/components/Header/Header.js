@@ -30,7 +30,7 @@ class Header extends Component {
     const { path } = this.props;
 
     return (
-      <Headroom>
+      <Headroom className="cell shrink">
         <div className="header">
           <Logo />
           <Navigation

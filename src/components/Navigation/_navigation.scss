@@ -5,17 +5,17 @@
   text-align: right;
 
   .link {
+    box-shadow: none;
+    color: $colour-grey-3;
+    display: inline-block;
     font-family: 'Domine', serif;
     font-size: .8rem;
-    box-shadow: none;
-    color: $colour-grey-light;
-    display: inline-block;
     padding: $y-unit ($x-unit / 2);
 
     &:hover,
     &:focus,
     &:active {
-      box-shadow: 0 1px 2px fade-out($colour-black, .75);
+      box-shadow: 0 1px 2px fade-out($colour-grey-black, .75);
       color: $colour-secondary;
       transform: translateY(-1px);
     }
