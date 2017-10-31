@@ -6,7 +6,9 @@
 @include foundation-xy-grid-classes;
 
 body {
-  background: $colour-grey-white;
+  background: $colour-grey-bg;
+  padding: 0;
+  margin: 0;
 }
 
 .container {
