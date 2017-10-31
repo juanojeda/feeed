@@ -1,8 +1,8 @@
-@import '../../sass/_variables';
+@import '../../sass/variables';
 
 .recipe-difficulty {
   &__container {
-    background: $colour-secondary-1;
+    background: red;
     height: .25rem;
     left: 0;
     position: absolute;

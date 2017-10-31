@@ -21,14 +21,14 @@ body {
 
 a {
   box-shadow: 0 1px currentColor;
-  color: $colour-secondary;
+  color: red;
   transition-duration: 200ms;
   transition-property: color box-shadow;
   transition-timing-function: ease-in;
 
   &:hover,
   &:focus {
-    background: fade-out($colour-secondary-lighter, .75);
+    background: fade-out(red, .75);
     box-shadow: 0 2px currentColor;
     outline: none;
   }

@@ -45,12 +45,12 @@
 
   &:hover {
     .logo__background {
-      background-color: $colour-primary;
-      color: $colour-real-white;
+      background-color: red;
+      color: $colour-grey-white;
     }
 
     .logo__logotype {
-      color: $colour-real-white;
+      color: $colour-grey-white;
     }
   }
 }

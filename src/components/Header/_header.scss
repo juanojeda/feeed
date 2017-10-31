@@ -1,12 +1,14 @@
 @import '../../sass/variables';
 @import '../../sass/functions';
 
+@import '../../../node_modules/foundation-sites/scss/util/util';
+
 .header {
-  background: $colour-real-white;
-  border-top: 4px solid $colour-primary;
+  background: $colour-grey-white;
+  border-top: 4px solid red;
   padding: 0 $gutter-outer-sm;
 
-  @media screen and (#{$bp-small}) {
+  @include breakpoint($bp-medium) {
     padding: 0 $gutter-outer;
   }
 }

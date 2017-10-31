@@ -1,9 +1,9 @@
 @import '../../sass/variables';
 
 .recipe-card {
-  background: $colour-real-white;
+  background: $colour-grey-white;
   border-radius: .25rem;
-  box-shadow: 0 0 0 0 fade-out($colour-secondary, .9);
+  box-shadow: 0 0 0 0 fade-out(red, .9);
   cursor: pointer;
   margin: 1rem;
   overflow: hidden;
@@ -24,13 +24,13 @@
 
   &:hover,
   &:focus {
-    box-shadow: 0 0 0 0.125rem $colour-secondary-1;
+    box-shadow: 0 0 0 0.125rem red;
     outline: 0;
     transform: translateY(-0.125rem);
   }
 
   &:active {
-    box-shadow: 0 0 0 0.25rem $colour-secondary;
+    box-shadow: 0 0 0 0.25rem red;
   }
 
   &__header,
@@ -53,7 +53,7 @@
 
   &__footer {
     align-self: flex-end;
-    background: mix($colour-grey-white, $colour-real-white);
+    background: $colour-grey-white;
     padding: 1rem 1.5rem 1.5rem;
   }
 

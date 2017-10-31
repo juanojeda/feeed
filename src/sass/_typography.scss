@@ -3,7 +3,7 @@
 @import './variables';
 @import './fonts';
 
-@mixin set-font-styles($size, $lineHeight: inherit, $marginBottom: 0) {
+@mixin set-font-styles($size, $lineHeight: $size*1.2, $marginBottom: $lineHeight) {
   font-size: $size;
   line-height: $lineHeight;
   margin-bottom: $marginBottom;
@@ -13,11 +13,11 @@
   @include get-font(heading, bold);
   @include set-font-styles(50px, 70px, 35px);
 
-  @include breakpoint($bp-small) {
+  @include breakpoint($bp-medium) {
     @include set-font-styles(85px, 105px, 71px);
   }
 
-  @include breakpoint($bp-medium) {
+  @include breakpoint($bp-large) {
     @include set-font-styles(120px, 140px, 106px);
   }
 }
@@ -26,63 +26,102 @@
   @include get-font(heading, light);
   @include set-font-styles(40px, 53px, 35px);
 
-  @include breakpoint($bp-small) {
+  @include breakpoint($bp-medium) {
     @include set-font-styles(50px, 70px, 35px);
   }
 
-  @include breakpoint($bp-medium) {
+  @include breakpoint($bp-large) {
     @include set-font-styles(85px, 105px, 71px);
   }
 }
 
 .heading--h3 {
   @include get-font(heading, bold);
-  @include set-font-styles(25px, 35px, 35px);
+  @include set-font-styles(25px, 35px);
 
-  @include breakpoint($bp-small) {
+  @include breakpoint($bp-medium) {
     @include set-font-styles(40px, 53px, 35px);
   }
 
-  @include breakpoint($bp-medium) {
+  @include breakpoint($bp-large) {
     @include set-font-styles(50px, 70px, 35px);
   }
 }
 
 .heading--h4 {
   @include get-font(heading, light);
-  @include set-font-styles(23px, 35px, 35px);
-
-  @include breakpoint($bp-small) {
-    @include set-font-styles(28px, 35px, 35px);
-  }
+  @include set-font-styles(23px, 35px);
 
   @include breakpoint($bp-medium) {
+    @include set-font-styles(28px, 35px);
+  }
+
+  @include breakpoint($bp-large) {
     @include set-font-styles(40px, 53px, 35px);
   }
 }
 
 .heading--h5 {
   @include get-font(heading, light);
-  @include set-font-styles(20px, 35px, 35px);
-
-  @include breakpoint($bp-small) {
-    @include set-font-styles(23px, 35px, 35px);
-  }
+  @include set-font-styles(20px, 35px);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(28px, 35px, 35px);
+    @include set-font-styles(23px, 35px);
+  }
+
+  @include breakpoint($bp-large) {
+    @include set-font-styles(28px, 35px);
   }
 }
 
 .heading--h6 {
   @include get-font(heading, bold);
-  @include set-font-styles(17px, 35px, 35px);
-
-  @include breakpoint($bp-small) {
-    @include set-font-styles(17px, 35px, 35px);
-  }
+  @include set-font-styles(17px, 35px);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(20px, 35px, 35px);
+    @include set-font-styles(17px, 35px);
+  }
+
+  @include breakpoint($bp-large) {
+    @include set-font-styles(20px, 35px);
+  }
+}
+
+.body--p1 {
+  @include get-font(body, regular);
+  @include set-font-styles(16px, 28px, 14px);
+
+  @include breakpoint($bp-medium) {
+    @include set-font-styles(18px, 28px, 21px);
+  }
+
+  @include breakpoint($bp-large) {
+    @include set-font-styles(20px, 35px, 28px);
+  }
+}
+
+.body--p2 {
+  @include get-font(body, regular);
+  @include set-font-styles(12px, 21px);
+
+  @include breakpoint($bp-medium) {
+    @include set-font-styles(14px, 28px);
+  }
+
+  @include breakpoint($bp-large) {
+    @include set-font-styles(16px, 28px);
+  }
+}
+
+.body--p3 {
+  @include get-font(body, regular);
+  @include set-font-styles(10px, 14px);
+
+  @include breakpoint($bp-medium) {
+    @include set-font-styles(12px, 21px);
+  }
+
+  @include breakpoint($bp-large) {
+    @include set-font-styles(12px, 21px);
   }
 }

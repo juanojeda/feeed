@@ -3,35 +3,35 @@
 //  COLOURS
 // ================================
 
-$colour-primary:      #991d4e;
-$colour-primary-1:    #e076a1;
-$colour-primary-2:    #fcc7dc;
-$colour-primary-3:    #631233;
+$colour-grey-black:     #04181e;
+$colour-grey-1:         #344b52;
+$colour-grey-2:         #627d85;
+$colour-grey-3:         #9ab1b8;
+$colour-grey-4:         #d1dbde;
+$colour-grey-bg:        #e6eff2;
+$colour-grey-white:     #f2f6f7;
 
-$colour-secondary:    #3c91e6;
-$colour-secondary-1:  #cce5ff;
-$colour-secondary-2:  #9ac7f4;
-$colour-secondary-3:  #286199;
-$colour-secondary-4:  #13304c;
+$colour-action-dark:    #150f80;
+$colour-action-base:    #3366e7;
+$colour-action-light:   #9ecdff;
+$colour-action-transp:  #cde7fa;
 
-$colour-tertiary:     #00ad68;
-$colour-tertiary-1:   #78e8b4;
-$colour-tertiary-2:   #004c3b;
+$colour-error-dark:    #821036;
+$colour-error-base:    #e7336e;
+$colour-error-light:   #fcb8d7;
+$colour-error-transp:  #f5e1ec;
 
-$colour-grey-black:   #04181e;
-$colour-grey-1:       #3b4749;
-$colour-grey-2:       #485b5e;
-$colour-grey-3:       #8ca0a3;
-$colour-grey-white:   #edf3f4;
-$colour-grey-lighter: mix($colour-grey-3, $colour-grey-white, 25%);
+$colour-success-dark:    #0a8f5c;
+$colour-success-base:    #16db9a;
+$colour-success-light:   #9aedc4;
+$colour-success-transp:  #d3f2e0;
 
-$colour-real-white:   #fff;
 
-$colour-rating-1:     #00d660;
-$colour-rating-2:     #cfd600;
-$colour-rating-3:     #ff9d00;
-$colour-rating-4:     #f45618;
-$colour-rating-5:     #d60031;
+$colour-rating-1:     $colour-success-base;
+$colour-rating-2:     #badb16;
+$colour-rating-3:     #edd311;
+$colour-rating-4:     #f29435;
+$colour-rating-5:     $colour-error-base;
 
 //  SPACING & LAYOUT
 // =================================
@@ -47,9 +47,9 @@ $header-height:   (2 * $y-unit) + (1.4rem); // header padding + font size + link
 
 //  BREAKPOINTS
 // =================================
-$bp-small:  600px;
-$bp-medium: 1024px;
-$bp-large: 1440px;
+$bp-medium:  600px;
+$bp-large: 1024px;
+$bp-xlarge: 1440px;
 
 //  ANIMATIONS
 // =================================
