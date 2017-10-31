@@ -1,0 +1,11 @@
+@mixin make-pseudo($display: block) {
+  content: "";
+  display: $display;
+}
+
+@mixin add-pseudo($position: before, $display: block) {
+  &::#{$position} {
+    @include make-pseudo($display);
+    @content;
+  }
+}

@@ -14,17 +14,20 @@ $colour-grey-white:     #f2f6f7;
 $colour-action-dark:    #150f80;
 $colour-action-base:    #3366e7;
 $colour-action-light:   #9ecdff;
-$colour-action-transp:  #cde7fa;
+$colour-action-transp:  fade-out($colour-action-light, .75);
+$colour-action-transp-opq: #cde7fa;
 
 $colour-error-dark:    #821036;
 $colour-error-base:    #e7336e;
 $colour-error-light:   #fcb8d7;
-$colour-error-transp:  #f5e1ec;
+$colour-error-transp:  fade-out($colour-error-light, .75);
+$colour-error-transp-opq:  #f5e1ec;
 
 $colour-success-dark:    #0a8f5c;
 $colour-success-base:    #16db9a;
 $colour-success-light:   #9aedc4;
-$colour-success-transp:  #d3f2e0;
+$colour-success-transp:  fade-out($colour-success-light, .75);
+$colour-success-transp-opq:  #d3f2e0;
 
 
 $colour-rating-1:     $colour-success-base;

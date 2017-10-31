@@ -9,7 +9,7 @@
   margin-bottom: $marginBottom;
 }
 
-.heading--h1 {
+@mixin make-h1() {
   @include get-font(heading, bold);
   @include set-font-styles(50px, 70px, 35px);
 
@@ -22,7 +22,7 @@
   }
 }
 
-.heading--h2 {
+@mixin make-h2() {
   @include get-font(heading, light);
   @include set-font-styles(40px, 53px, 35px);
 
@@ -35,7 +35,7 @@
   }
 }
 
-.heading--h3 {
+@mixin make-h3() {
   @include get-font(heading, bold);
   @include set-font-styles(25px, 35px);
 
@@ -48,7 +48,7 @@
   }
 }
 
-.heading--h4 {
+@mixin make-h4() {
   @include get-font(heading, light);
   @include set-font-styles(23px, 35px);
 
@@ -61,7 +61,7 @@
   }
 }
 
-.heading--h5 {
+@mixin make-h5() {
   @include get-font(heading, light);
   @include set-font-styles(20px, 35px);
 
@@ -74,7 +74,7 @@
   }
 }
 
-.heading--h6 {
+@mixin make-h6() {
   @include get-font(heading, bold);
   @include set-font-styles(17px, 35px);
 
@@ -87,7 +87,7 @@
   }
 }
 
-.body--p1 {
+@mixin make-p1(){
   @include get-font(body, regular);
   @include set-font-styles(16px, 28px, 14px);
 
@@ -99,8 +99,7 @@
     @include set-font-styles(20px, 35px, 28px);
   }
 }
-
-.body--p2 {
+@mixin make-p2(){
   @include get-font(body, regular);
   @include set-font-styles(12px, 21px);
 
@@ -112,8 +111,7 @@
     @include set-font-styles(16px, 28px);
   }
 }
-
-.body--p3 {
+@mixin make-p3(){
   @include get-font(body, regular);
   @include set-font-styles(10px, 14px);
 
@@ -125,3 +123,21 @@
     @include set-font-styles(12px, 21px);
   }
 }
+
+.heading--h1 { @include make-h1(); }
+
+.heading--h2 { @include make-h2(); }
+
+.heading--h3 { @include make-h3(); }
+
+.heading--h4 { @include make-h3(); }
+
+.heading--h5 { @include make-h5(); }
+
+.heading--h6 { @include make-h6(); }
+
+.body--p1 { @include make-p1(); }
+
+.body--p2 { @include make-p2(); }
+
+.body--p3 { @include make-p3(); }
