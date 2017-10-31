@@ -1,7 +1,15 @@
+@import './variables';
+
 $breakpoints: (
-  small: 0,
-  medium: $bp-small,
-  large: $bp-medium,
-  xlarge: $bp-large,
+  small: $bp-small,
+  medium: $bp-medium,
+  large: $bp-large,
+  xlarge: $bp-xlarge,
 );
 
+$grid-margin-gutters: (
+  small: $gutter-small,
+  medium: $gutter-medium,
+  large: $gutter-large,
+  xlarge: $gutter-xlarge
+);

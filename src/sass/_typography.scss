@@ -11,116 +11,126 @@
 
 @mixin make-h1() {
   @include get-font(heading, bold);
-  @include set-font-styles(50px, 70px, 35px);
+  @include set-font-styles(5rem, 7rem, 3.5rem);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(85px, 105px, 71px);
+    @include set-font-styles(8.5rem, 10.5rem, 7.1rem);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(120px, 140px, 106px);
+    @include set-font-styles(12rem, 14rem, 10.6rem);
   }
 }
 
 @mixin make-h2() {
   @include get-font(heading, light);
-  @include set-font-styles(40px, 53px, 35px);
+  @include set-font-styles(4rem, 5.3rem, 3.5rem);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(50px, 70px, 35px);
+    @include set-font-styles(5rem, 7rem, 3.5rem);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(85px, 105px, 71px);
+    @include set-font-styles(8.5rem, 10.5rem, 7.1rem);
   }
 }
 
 @mixin make-h3() {
   @include get-font(heading, bold);
-  @include set-font-styles(25px, 35px);
+  @include set-font-styles(2.5rem, 3.5rem);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(40px, 53px, 35px);
+    @include set-font-styles(4rem, 5.3rem, 3.5rem);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(50px, 70px, 35px);
+    @include set-font-styles(5rem, 7rem, 3.5rem);
   }
 }
 
 @mixin make-h4() {
   @include get-font(heading, light);
-  @include set-font-styles(23px, 35px);
+  @include set-font-styles(2.3rem, 3.5rem);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(28px, 35px);
+    @include set-font-styles(2.8rem, 3.5rem);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(40px, 53px, 35px);
+    @include set-font-styles(4rem, 5.3rem, 3.5rem);
   }
 }
 
 @mixin make-h5() {
   @include get-font(heading, light);
-  @include set-font-styles(20px, 35px);
+  @include set-font-styles(2rem, 3.5rem);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(23px, 35px);
+    @include set-font-styles(2.3rem, 3.5rem);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(28px, 35px);
+    @include set-font-styles(2.8rem, 3.5rem);
   }
 }
 
 @mixin make-h6() {
   @include get-font(heading, bold);
-  @include set-font-styles(17px, 35px);
+  @include set-font-styles(1.7rem, 3.5rem);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(17px, 35px);
+    @include set-font-styles(1.7rem, 3.5rem);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(20px, 35px);
+    @include set-font-styles(2rem, 3.5rem);
   }
 }
 
-@mixin make-p1(){
+@mixin make-p1($margin: true) {
+
+  $margin-small: 0;
+  $margin-medium: 0;
+  $margin-large: 0;
+  @if ($margin) {
+    $margin-small: 1.4rem;
+    $margin-medium: 2.1rem;
+    $margin-large: 2.8rem;
+  }
+
   @include get-font(body, regular);
-  @include set-font-styles(16px, 28px, 14px);
+  @include set-font-styles(1.6rem, 2.8rem, $margin-small);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(18px, 28px, 21px);
+    @include set-font-styles(1.8rem, 2.8rem, $margin-medium);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(20px, 35px, 28px);
+    @include set-font-styles(2rem, 3.5rem, $margin-large);
   }
 }
-@mixin make-p2(){
+@mixin make-p2() {
   @include get-font(body, regular);
-  @include set-font-styles(12px, 21px);
+  @include set-font-styles(1.2rem, 2.1rem);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(14px, 28px);
+    @include set-font-styles(1.4rem, 2.8rem);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(16px, 28px);
+    @include set-font-styles(1.6rem, 2.8rem);
   }
 }
-@mixin make-p3(){
+@mixin make-p3() {
   @include get-font(body, regular);
-  @include set-font-styles(10px, 14px);
+  @include set-font-styles(1rem, 1.4rem);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(12px, 21px);
+    @include set-font-styles(1.2rem, 2.1rem);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(12px, 21px);
+    @include set-font-styles(1.2rem, 2.1rem);
   }
 }
 

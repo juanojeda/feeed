@@ -36,23 +36,32 @@ $colour-rating-3:     #edd311;
 $colour-rating-4:     #f29435;
 $colour-rating-5:     $colour-error-base;
 
+// GUTTERS
+// =================================
+
+$gutter-small:    2.8rem;
+$gutter-medium:   3.5rem;
+$gutter-large:    4.2rem;
+$gutter-xlarge:   4.8rem;
+
 //  SPACING & LAYOUT
 // =================================
 
-$gutter-outer-sm: 1rem;
-$gutter-outer:    2rem;
-$gutter-inner:    2rem;
+$x-unit:          $gutter-small;
+$y-unit:          $gutter-small / 2;
+
+$gutter-outer-sm: $x-unit / 2;
+$gutter-outer:    $x-unit;
+$gutter-inner:    $x-unit;
 $reading-width:   42rem;
-$column-width:    $reading-width / 12;
-$x-unit:          1rem;
-$y-unit:          1rem;
 $header-height:   (2 * $y-unit) + (1.4rem); // header padding + font size + link padding
 
 //  BREAKPOINTS
 // =================================
-$bp-medium:  600px;
-$bp-large: 1024px;
-$bp-xlarge: 1440px;
+$bp-small:    0;
+$bp-medium:   600px;
+$bp-large:    1140px;
+$bp-xlarge:   1440px;
 
 //  ANIMATIONS
 // =================================

@@ -8,26 +8,16 @@ import './_base.scss';
 import '../sass/_typography.scss';
 
 class Index extends React.Component {
-
-  introBoxBodyHtml(){
-    return (
-      <p>
-        Welcome to my corner of the internets! If you like things like <Link to='/'>food photography</Link> (and puns!), <Link to='/recipes'>recipes</Link>, <Link to='/'>web development</Link>, and <Link to='/'>general banter</Link>, you've come to the right place.
-      </p>
-    )
-  }
   
   render() {
     return (
-      <div className='cell auto grid-x'>
-        <div className="cell medium-6">
+      <div className="cell auto grid-x grid-margin-x">
+        <div className="cell small-12 large-6">
           <IntroBox
             className=''
-            heading={`Hello, my name is Juan :)`}>
-            {this.introBoxBodyHtml()}
-          </IntroBox>
+            heading={`Hello, my name is Juan :)`} />
         </div>
-        <div className="cell medium-6">
+        <div className="cell small-12 large-6">
           <ContentBox
             className=''>
             <div className='container'>

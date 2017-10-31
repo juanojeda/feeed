@@ -27,9 +27,7 @@
 
   &__background {
     background: $colour-grey-black;
-    height: get-col-width(1.5);
     transition: $global-transition background;
-    width: get-col-width(1.5);
   }
 
   &__logotype {

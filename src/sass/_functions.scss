@@ -16,7 +16,3 @@
 @function get-y($units: 1){
   @return get-unit($units, 'y');
 }
-
-@function get-col-width($cols: 1){
-  @return $cols * $column-width;
-}

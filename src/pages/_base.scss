@@ -1,6 +1,7 @@
 @import '../sass/variables';
 @import '../sass/functions';
 @import '../sass/mixins';
+@import '../sass/settings';
 
 @import '../sass/typography';
 
@@ -9,9 +10,17 @@
 
 @include foundation-xy-grid-classes;
 
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: .625rem;
+}
 body {
-  @include make-p1();
+  @include make-p1(false);
   background: $colour-grey-bg;
+  color: $colour-grey-black;
   margin: 0;
   padding: 0;
 }

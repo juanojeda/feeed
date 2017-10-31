@@ -17,9 +17,9 @@ export default class MainLayout extends React.Component {
         </Helmet>
         <Header path={pathname} />
 
-        <div className="cell medium-cell-block-container auto">
+        {/* <div className="cell auto"> */}
           {children()}
-        </div>
+        {/* </div> */}
       </div>
     );
   }
