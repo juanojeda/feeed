@@ -5,6 +5,7 @@ import IntroBox from '../components/IntroBox/IntroBox';
 import ContentBox from '../components/ContentBox/ContentBox';
 
 import './_base.scss';
+import '../sass/_typography.scss';
 
 class Index extends React.Component {
 
@@ -22,7 +23,7 @@ class Index extends React.Component {
         <div className="cell medium-6">
           <IntroBox
             className=''
-            heading={`Hello, I'm Juan :)`}>
+            heading={`Hello, my name is Juan :)`}>
             {this.introBoxBodyHtml()}
           </IntroBox>
         </div>

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import './_intro-box.scss';
+import '../../sass/_typography.scss';
 
 class IntroBox extends Component {
   render() {
@@ -11,7 +12,7 @@ class IntroBox extends Component {
     return (
       <div className="intro-box">
         <div className="container">
-          <h1>{heading}</h1>
+          <h1 className="heading--h1">{heading}</h1>
           {children}
         </div>
       </div>

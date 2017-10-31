@@ -1,0 +1,88 @@
+
+@import '../../node_modules/foundation-sites/scss/util/util';
+@import './variables';
+@import './fonts';
+
+@mixin set-font-styles($size, $lineHeight: inherit, $marginBottom: 0) {
+  font-size: $size;
+  line-height: $lineHeight;
+  margin-bottom: $marginBottom;
+}
+
+.heading--h1 {
+  @include get-font(heading, bold);
+  @include set-font-styles(50px, 70px, 35px);
+
+  @include breakpoint($bp-small) {
+    @include set-font-styles(85px, 105px, 71px);
+  }
+
+  @include breakpoint($bp-medium) {
+    @include set-font-styles(120px, 140px, 106px);
+  }
+}
+
+.heading--h2 {
+  @include get-font(heading, light);
+  @include set-font-styles(40px, 53px, 35px);
+
+  @include breakpoint($bp-small) {
+    @include set-font-styles(50px, 70px, 35px);
+  }
+
+  @include breakpoint($bp-medium) {
+    @include set-font-styles(85px, 105px, 71px);
+  }
+}
+
+.heading--h3 {
+  @include get-font(heading, bold);
+  @include set-font-styles(25px, 35px, 35px);
+
+  @include breakpoint($bp-small) {
+    @include set-font-styles(40px, 53px, 35px);
+  }
+
+  @include breakpoint($bp-medium) {
+    @include set-font-styles(50px, 70px, 35px);
+  }
+}
+
+.heading--h4 {
+  @include get-font(heading, light);
+  @include set-font-styles(23px, 35px, 35px);
+
+  @include breakpoint($bp-small) {
+    @include set-font-styles(28px, 35px, 35px);
+  }
+
+  @include breakpoint($bp-medium) {
+    @include set-font-styles(40px, 53px, 35px);
+  }
+}
+
+.heading--h5 {
+  @include get-font(heading, light);
+  @include set-font-styles(20px, 35px, 35px);
+
+  @include breakpoint($bp-small) {
+    @include set-font-styles(23px, 35px, 35px);
+  }
+
+  @include breakpoint($bp-medium) {
+    @include set-font-styles(28px, 35px, 35px);
+  }
+}
+
+.heading--h6 {
+  @include get-font(heading, bold);
+  @include set-font-styles(17px, 35px, 35px);
+
+  @include breakpoint($bp-small) {
+    @include set-font-styles(17px, 35px, 35px);
+  }
+
+  @include breakpoint($bp-medium) {
+    @include set-font-styles(20px, 35px, 35px);
+  }
+}

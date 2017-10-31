@@ -18,7 +18,7 @@ $colour-tertiary:     #00ad68;
 $colour-tertiary-1:   #78e8b4;
 $colour-tertiary-2:   #004c3b;
 
-$colour-grey-black:   #161e1a;
+$colour-grey-black:   #04181e;
 $colour-grey-1:       #3b4749;
 $colour-grey-2:       #485b5e;
 $colour-grey-3:       #8ca0a3;
@@ -47,8 +47,9 @@ $header-height:   (2 * $y-unit) + (1.4rem); // header padding + font size + link
 
 //  BREAKPOINTS
 // =================================
-$bp-small:  'min-width: 27.5rem';
-$bp-medium: 'min-width: 60rem';
+$bp-small:  600px;
+$bp-medium: 1024px;
+$bp-large: 1440px;
 
 //  ANIMATIONS
 // =================================
