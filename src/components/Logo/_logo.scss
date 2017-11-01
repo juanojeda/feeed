@@ -1,7 +1,11 @@
+@import '../../sass/mixins';
 @import '../../sass/variables';
 @import '../../sass/functions';
 
+
 .logo {
+  @include get-font(heading, light);
+  font-size: inherit;
   left: $gutter-outer;
   margin: 0 auto;
   position: absolute;
@@ -9,29 +13,32 @@
   transition: 400ms ease all 100ms;
 
   a {
-    &,
-    &:hover,
-    &:visited,
-    &:focus {
-      background: transparent;
-      box-shadow: none;
-      color: $colour-grey-white;
-      display: block;
-      font-family: 'Quicksand', sans-serif;
-      font-size: 1.25rem;
-      height: 100%;
-      padding: 0.5rem;
-      width: 100%;
+    background: transparent;
+    box-shadow: none;
+    color: $colour-grey-white;
+    display: block;
+    font-family: inherit;
+    height: 100%;
+    padding: 4.2rem;
+    width: 100%;
+    
+    &::before,
+    &::after {
+      content: none;
     }
   }
 
   &__background {
     background: $colour-grey-black;
-    transition: $global-transition background;
+    transition-delay: 1s;
+    transition-duration: .5s;
+    transition-property: background;
+    transition-timing-function: ease-out;
   }
 
   &__logotype {
-    bottom: .5rem;
+    bottom: 1rem;
+    left: 1rem;
     position: absolute;
     transition: $global-transition color;
   }
@@ -43,8 +50,9 @@
 
   &:hover {
     .logo__background {
-      background-color: red;
+      background-color: $colour-action-base;
       color: $colour-grey-white;
+      transition-delay: .2s;
     }
 
     .logo__logotype {

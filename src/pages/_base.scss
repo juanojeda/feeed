@@ -35,7 +35,8 @@ body {
   }
 }
 
-a {
+a,
+.link {
   @include get-font(body, bold);
   color: $colour-action-dark;
   cursor: pointer;
@@ -76,7 +77,8 @@ a {
     height: 3px;
     left: 0;
     position: absolute;
-    transition-duration: .3s;
+    transition-delay: .2s;
+    transition-duration: .7s;
     transition-property: background width;
     transition-timing-function: ease-out;
     width: 100%;
@@ -90,6 +92,22 @@ a {
 
     &::after {
       background: $colour-action-base;
+      transition-delay: .5s;
+    }
+  }
+
+  &--block {
+    display: block;
+    margin: get-y(1) 0;
+
+    &::after {
+      width: 25%;
+    }
+
+    &:hover {
+      &::after {
+        width: 75%;
+      }
     }
   }
 }

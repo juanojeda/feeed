@@ -13,7 +13,7 @@ class IntroBox extends Component {
     return (
       <div className="intro-box">
         <div className="grid-x grid-padding-x">
-          <div className="cell small-9 medium-7 large-11">
+          <div className="cell small-9 medium-7 large-10">
             <h1 className="heading--h1">{heading}</h1>
             {children}
           </div>

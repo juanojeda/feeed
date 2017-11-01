@@ -1,3 +1,5 @@
+@import './variables';
+
 @mixin make-pseudo($display: block) {
   content: "";
   display: $display;
@@ -7,5 +9,11 @@
   &::#{$position} {
     @include make-pseudo($display);
     @content;
+  }
+}
+
+@mixin get-font($set, $style) {
+  @each $key, $value in map-get(map-get($fonts, $set), $style) {
+    #{$key}: $value;
   }
 }

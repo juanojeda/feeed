@@ -68,3 +68,54 @@ $bp-xlarge:   1440px;
 $global-transition: 200ms ease;
 
 // style-lint enable
+
+
+// FONTS
+// =================================
+
+$fonts: (
+  heading: (
+    bold:       (
+      font-family: 'QuicksandBold',
+      font-weight: 700,
+      font-style: normal,
+    ),
+    medium:     (
+      font-family: 'QuicksandMedium',
+      font-weight: 500,
+      font-style: normal,
+    ),
+    regular:    (
+      font-family: 'QuicksandRegular',
+      font-weight: 400,
+      font-style: normal,
+    ),
+    light:      (
+      font-family: 'QuicksandLight',
+      font-weight: 300,
+      font-style: normal,
+    ),
+  ),
+  body: (
+    regular:    (
+      font-family: 'LoraRegular',
+      font-weight: 400,
+      font-style: normal,
+    ),
+    bold:       (
+      font-family: 'LoraBold',
+      font-weight: 700,
+      font-style: normal,
+    ),
+    italic:     (
+      font-family: 'LoraItalic',
+      font-weight: 400,
+      font-style: italic,
+    ),
+    boldItalic: (
+      font-family: 'LoraBoldItalic',
+      font-weight: 700,
+      font-style: italic,
+    ),
+  )
+);

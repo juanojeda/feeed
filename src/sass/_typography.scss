@@ -2,6 +2,7 @@
 @import '../../node_modules/foundation-sites/scss/util/util';
 @import './variables';
 @import './fonts';
+@import './mixins';
 
 @mixin set-font-styles($size, $lineHeight: $size*1.2, $marginBottom: $lineHeight) {
   font-size: $size;
@@ -18,7 +19,7 @@
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(12rem, 14rem, 10.6rem);
+    @include set-font-styles(10.8rem, 13.3rem, 10.6rem);
   }
 }
 
@@ -31,7 +32,7 @@
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(8.5rem, 10.5rem, 7.1rem);
+    @include set-font-styles(7rem, 9.8rem, 7.1rem);
   }
 }
 
