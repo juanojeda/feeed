@@ -1,3 +1,4 @@
+@import '../../sass/mixins';
 @import '../../sass/variables';
 @import '../../sass/functions';
 
@@ -5,23 +6,21 @@
   text-align: right;
 
   .link {
-    box-shadow: none;
-    color: $colour-grey-3;
-    display: inline-block;
-    font-family: 'Domine', serif;
-    font-size: .8rem;
+    @include get-font(heading, medium);
+    margin: 0;
     padding: $y-unit ($x-unit / 2);
-
-    &:hover,
-    &:focus,
-    &:active {
-      box-shadow: 0 1px 2px fade-out($colour-grey-black, .75);
-      color: red;
-      transform: translateY(-1px);
+    
+    &::after {
+      bottom: 0;
+      margin-left: 50%;
+      width: 0;
     }
 
-    &--active {
-      border-bottom: 2px solid red;
+    &:hover {
+      &::after {
+        margin-left: 5%;
+        width: 90%;
+      }
     }
   }
 }
