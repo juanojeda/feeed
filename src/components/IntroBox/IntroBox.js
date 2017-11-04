@@ -11,7 +11,7 @@ import '../../pages/_base.scss';
 class IntroBox extends Component {
   render() {
 
-    const { heading, children, colours } = this.props;
+    const { heading, children, colours, imgUrl, imgHeight, imgWidth } = this.props;
 
     const themeStyles = {
       color: colours.colourFore,
@@ -25,7 +25,9 @@ class IntroBox extends Component {
             <Halftone
               css={{zIndex: -1}}
               {...colours}
-              imgUrl={`${__PATH_PREFIX__}/images/profile.jpg`}
+              imgUrl={imgUrl}
+              height={imgHeight}
+              width={imgWidth}
               opacity={0.75} />
               <div className="intro-box__body">
                 <h1 className="heading--h1">{heading}</h1>
@@ -39,7 +41,18 @@ class IntroBox extends Component {
 }
 
 IntroBox.propTypes = {
-  heading: PropTypes.string.isRequired
+  heading: PropTypes.string.isRequired,
+  colours: PropTypes.shape({
+    colourFore: PropTypes.string.isRequired,
+    colourBg: PropTypes.string.isRequired
+  }).isRequired,
 };
+
+IntroBox.defaultProps = {
+  colours: {
+    colourBg: '#04181e',
+    colourFore: '#f2f6f7',
+  }
+}
 
 export default IntroBox;

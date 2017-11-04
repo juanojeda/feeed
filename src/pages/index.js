@@ -36,8 +36,10 @@ class Index extends React.Component {
         <div className="cell small-12 large-6">
           <IntroBox
             colours={this.state.colours}
-            className=''
-            heading={`Hello, my name is Juan :)`} />
+            heading={`Hello, my name is Juan :)`}
+            imgUrl={`${__PATH_PREFIX__}/images/profile.jpg`}
+            imgHeight={613}
+            imgWidth={920} />
         </div>
         <div className="cell small-12 large-6">
           <ContentBox
@@ -45,8 +47,8 @@ class Index extends React.Component {
             <div className='container grid-x'>
               <div className="cell small-12 medium-6 large-8">
                 <h2 className="heading--h2">These are some of my hobbies</h2>
-                <a href="#" className="link link--block">Recipes &amp; food for thought</a>
-                <a href="#" className="link link--block">Thoughts on design &amp; development</a>
+                <Link to="/recipes" className="link link--block">Recipes &amp; food for thought</Link>
+                <Link to="/notes" className="link link--block">Thoughts on design &amp; development</Link>
 
               </div>
             </div>

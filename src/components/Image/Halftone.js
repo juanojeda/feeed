@@ -7,12 +7,12 @@ import './_image.scss';
 class Halftone extends Component {
   render() {
 
-    const { colourBg, colourFore, imgUrl, opacity } = this.props;
+    const { colourBg, colourFore, imgUrl, opacity, width, height } = this.props;
 
     return (
       <div className="image image--halftone">
         <svg
-          viewBox="0 0 920 613"
+          viewBox={`0 0 ${width} ${height}`}
           preserveAspectRatio="xMidYMin slice"
           className="image__bg"
           css={{
