@@ -6,10 +6,14 @@
 .intro-box {
   align-content: center;
   align-items: center;
-  background: $colour-grey-black;
-  color: $colour-grey-white;
   display: flex;
   min-height: 50vh;
+  position: relative;
+
+  &__body {
+    position: relative;
+    z-index: 1;
+  }
 
   @include breakpoint($bp-large) {
     min-height: 100%;
