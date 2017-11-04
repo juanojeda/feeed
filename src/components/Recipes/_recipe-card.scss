@@ -1,11 +1,14 @@
 @import '../../sass/variables';
+@import '../../sass/functions';
+@import '../../sass/typography';
 
 .recipe-card {
   background: $colour-grey-white;
-  border-radius: .25rem;
-  box-shadow: 0 0 0 0 fade-out(red, .9);
+  border-radius: get-radius(.5);
+  box-shadow: 0 0 0 0 fade-out($colour-grey-black, .9);
   cursor: pointer;
-  margin: 1rem;
+  justify-content: space-between;
+  margin-bottom: get-y(2);
   overflow: hidden;
   position: relative;
   transition-duration: 100ms;
@@ -15,46 +18,47 @@
   a {
     box-shadow: none;
     color: $colour-grey-black;
+    font-family: inherit;
+    font-weight: inherit;
+
+    &::before,
+    &::after {
+      content: none;
+    }
 
     &:hover,
     &:focus {
       background: inherit;
+      z-index: initial;
     }
   }
 
   &:hover,
   &:focus {
-    box-shadow: 0 0 0 0.125rem red;
+    box-shadow: 0 0 0 get-y(.25) $colour-action-transp;
     outline: 0;
-    transform: translateY(-0.125rem);
+    transform: translateY(get-y(-0.25));
   }
 
   &:active {
-    box-shadow: 0 0 0 0.25rem red;
-  }
-
-  &__header,
-  &__body,
-  &__footer {
-    flex: 0 0 100%;
+    box-shadow: 0 0 0 get-y(.5) $colour-action-light;
   }
 
   &__header {
-    padding: 1.5rem 1.5rem 1rem;
+    padding: get-y(2) get-x(1) get-y(.5);
   }
 
   &__title {
-    margin-bottom: .55rem;
+    @include make-h4(false);
   }
 
   &__body {
-    padding: 1rem 1.5rem;
+    padding: 0 get-x(1) get-y(2);
   }
 
   &__footer {
-    align-self: flex-end;
     background: $colour-grey-white;
-    padding: 1rem 1.5rem 1.5rem;
+    padding-bottom: get-y();
   }
 
   &__date {

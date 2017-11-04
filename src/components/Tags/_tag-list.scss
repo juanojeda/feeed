@@ -1,6 +1,10 @@
 @import '../../sass/variables';
+@import '../../sass/functions';
 
 .tag-list {
+  margin: 0;
+  padding-left: get-x();
+  padding-right: get-x();
   &,
   &__tag {
     display: inline-block;
@@ -8,10 +12,10 @@
   }
 
   &__tag {
-    background: $colour-grey-white;
-    color: red;
+    background: $colour-grey-bg;
+    color: $colour-grey-2;
     font-size: 80%;
-    margin-right: .5rem;
-    padding: 0.125rem .25rem;
+    margin-right: get-x(.25);
+    padding: get-x(.25) get-y(.5);
   }
 }

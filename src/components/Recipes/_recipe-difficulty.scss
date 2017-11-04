@@ -1,9 +1,11 @@
 @import '../../sass/variables';
+@import '../../sass/functions';
+@import '../../sass/typography';
 
 .recipe-difficulty {
   &__container {
-    background: red;
-    height: .25rem;
+    background: $colour-grey-4;
+    height: get-y(.5);
     left: 0;
     position: absolute;
     top: 0;
@@ -12,15 +14,13 @@
 
   &__bar {
     height: 100%;
+  }
 
-    &:before {
-      background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) calc(21% - 1.5px), rgba(255, 255, 255, 1) calc(21% - 1.5px), rgba(255, 255, 255, 1) 21%, rgba(255, 255, 255, 0) 21%, rgba(255, 255, 255, 0) calc(41% - 1.5px), rgba(255, 255, 255, 1) calc(41% - 1.5px), rgba(255, 255, 255, 1) 41%, rgba(255, 255, 255, 0) 41%, rgba(255, 255, 255, 0) calc(61% - 1.5px), rgba(255, 255, 255, 1) calc(61% - 1.5px), rgba(255, 255, 255, 1) 61%, rgba(255, 255, 255, 0) 61%, rgba(255, 255, 255, 0) calc(81% - 1.5px), rgba(255, 255, 255, 1) calc(81% - 1.5px), rgba(255, 255, 255, 1) 81%, rgba(255, 255, 255, 0) 81%);
-      content: '';
-      display: block;
-      height: 100%;
-      position: absolute;
-      width: 100%;
-    }
+  &__rating-text {
+    @include make-p3();
+    color: $colour-grey-3;
+    padding: get-y(1) get-x(1) get-y(.5);
+    text-align: right;
   }
 
   &--rating-1 {

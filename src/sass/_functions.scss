@@ -16,3 +16,7 @@
 @function get-y($units: 1){
   @return get-unit($units, 'y');
 }
+
+@function get-radius($units: 1) {
+  @return $units * $y-unit;
+}

@@ -7,84 +7,139 @@
 @mixin set-font-styles($size, $lineHeight: $size*1.2, $marginBottom: $lineHeight) {
   font-size: $size;
   line-height: $lineHeight;
+  margin-top: 0;
   margin-bottom: $marginBottom;
 }
 
-@mixin make-h1() {
+@mixin make-h1($useMarginBottom: true) {
+  $margin-bottom-sml: 3.5rem;
+  $margin-bottom-med: 7.1rem;
+  $margin-bottom-lrg: 10.6rem;
+  
+  @if not $useMarginBottom {
+    $margin-bottom-sml: 0;
+    $margin-bottom-med: 0;
+    $margin-bottom-lrg: 0;
+  }
   @include get-font(heading, bold);
-  @include set-font-styles(5rem, 7rem, 3.5rem);
+  @include set-font-styles(5rem, 7rem, $margin-bottom-sml);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(8.5rem, 10.5rem, 7.1rem);
+    @include set-font-styles(8.5rem, 10.6rem, $margin-bottom-med);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(10.8rem, 13.3rem, 10.6rem);
+    @include set-font-styles(10.8rem, 13.3rem, $margin-bottom-lrg);
   }
 }
 
-@mixin make-h2() {
+@mixin make-h2($useMarginBottom: true) {
+  $margin-bottom-sml: 3.5rem;
+  $margin-bottom-med: 3.5rem;
+  $margin-bottom-lrg: 7.1rem;
+  
+  @if not $useMarginBottom {
+    $margin-bottom-sml: 0;
+    $margin-bottom-med: 0;
+    $margin-bottom-lrg: 0;
+  }
   @include get-font(heading, light);
-  @include set-font-styles(4rem, 5.3rem, 3.5rem);
+  @include set-font-styles(4rem, 5.3rem, $margin-bottom-sml);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(5rem, 7rem, 3.5rem);
+    @include set-font-styles(5rem, 7rem, $margin-bottom-med);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(7rem, 9.8rem, 7.1rem);
+    @include set-font-styles(7rem, 9.8rem, $margin-bottom-lrg);
   }
 }
 
-@mixin make-h3() {
+@mixin make-h3($useMarginBottom: true) {
+  $margin-bottom-sml: 3.5rem;
+  $margin-bottom-med: 3.5rem;
+  $margin-bottom-lrg: 3.5rem;
+  
+  @if not $useMarginBottom {
+    $margin-bottom-sml: 0;
+    $margin-bottom-med: 0;
+    $margin-bottom-lrg: 0;
+  }
   @include get-font(heading, bold);
-  @include set-font-styles(2.5rem, 3.5rem);
+  @include set-font-styles(2.5rem,3.5rem, $margin-bottom-sml);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(4rem, 5.3rem, 3.5rem);
+    @include set-font-styles(4rem, 5.3rem, $margin-bottom-med);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(5rem, 7rem, 3.5rem);
+    @include set-font-styles(5rem, 7rem, $margin-bottom-lrg);
   }
 }
 
-@mixin make-h4() {
+@mixin make-h4($useMarginBottom: true) {
+  $margin-bottom-sml: 3.5rem;
+  $margin-bottom-med: 3.5rem;
+  $margin-bottom-lrg: 3.5rem;
+  
+  @if not $useMarginBottom {
+    $margin-bottom-sml: 0;
+    $margin-bottom-med: 0;
+    $margin-bottom-lrg: 0;
+  }
   @include get-font(heading, light);
-  @include set-font-styles(2.3rem, 3.5rem);
+  @include set-font-styles(2.3rem, 3.5rem, $margin-bottom-sml);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(2.8rem, 3.5rem);
+    @include set-font-styles(2.8rem, 3.5rem, $margin-bottom-med);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(4rem, 5.3rem, 3.5rem);
+    @include set-font-styles(4rem, 5.3rem, $margin-bottom-lrg);
   }
 }
 
-@mixin make-h5() {
+@mixin make-h5($useMarginBottom: true) {
+  $margin-bottom-sml: 3.5rem;
+  $margin-bottom-med: 3.5rem;
+  $margin-bottom-lrg: 3.5rem;
+  
+  @if not $useMarginBottom {
+    $margin-bottom-sml: 0;
+    $margin-bottom-med: 0;
+    $margin-bottom-lrg: 0;
+  }
   @include get-font(heading, light);
-  @include set-font-styles(2rem, 3.5rem);
+  @include set-font-styles(2rem, 3.5rem, $margin-bottom-sml);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(2.3rem, 3.5rem);
+    @include set-font-styles(2.3rem, 3.5rem, $margin-bottom-med);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(2.8rem, 3.5rem);
+    @include set-font-styles(2.8rem, 3.5rem $margin-bottom-lrg);
   }
 }
 
-@mixin make-h6() {
+@mixin make-h6($useMarginBottom: true) {
+  $margin-bottom-sml: 3.5rem;
+  $margin-bottom-med: 3.5rem;
+  $margin-bottom-lrg: 3.5rem;
+  
+  @if not $useMarginBottom {
+    $margin-bottom-sml: 0;
+    $margin-bottom-med: 0;
+    $margin-bottom-lrg: 0;
+  }
   @include get-font(heading, bold);
-  @include set-font-styles(1.7rem, 3.5rem);
+  @include set-font-styles(1.7rem, 3.5rem, $margin-bottom-sml);
 
   @include breakpoint($bp-medium) {
-    @include set-font-styles(1.7rem, 3.5rem);
+    @include set-font-styles(1.7rem, 3.5rem, $margin-bottom-med);
   }
 
   @include breakpoint($bp-large) {
-    @include set-font-styles(2rem, 3.5rem);
+    @include set-font-styles(2rem, 3.5rem, $margin-bottom-lrg);
   }
 }
 

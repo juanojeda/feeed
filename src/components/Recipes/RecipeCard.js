@@ -19,9 +19,8 @@ class RecipeCard extends Component {
     const { slug } = fields;
 
     return (
-      <article className="recipe-card l-flex-item--3up" tabIndex="0">
-        <div className="l-flex">
-          <Link to={`recipes/${slug}`}>
+      <article className="recipe-card medium-6 cell grid-y" tabIndex="0">
+          <Link to={`recipes/${slug}`} className="cell">
             <header className="recipe-card__header">
               <h3 className="recipe-card__title">{title}</h3>
               <small className="recipe-card__date">published on {moment(date).format('dddd, MMMM Do YYYY')}</small>
@@ -30,11 +29,10 @@ class RecipeCard extends Component {
               <p>{blurb}</p>
             </section>
           </Link>
-          <footer className="recipe-card__footer">
+          <footer className="cell recipe-card__footer grid-x">
             <TagList tags={tags} />
             <RecipeDifficulty difficulty={difficulty} />
           </footer>
-        </div>
       </article>
     );
   }

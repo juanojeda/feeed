@@ -10,7 +10,7 @@ export default class MainLayout extends React.Component {
     const { children, location } = this.props;
     const { pathname } = location;
     return (
-      <div className="grid-y large-grid-frame">
+      <div className="grid-y" css={{height: "100vh"}}>
         <Helmet>
           <title>{`${config.siteTitle}`}</title>
           <meta name='description' content={config.siteDescription} />

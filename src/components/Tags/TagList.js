@@ -7,7 +7,7 @@ class TagList extends Component {
   render() {
     const { tags } = this.props;
     return (
-      <ul className="tag-list">
+      <ul className="tag-list cell auto">
         {
           tags.map((tag) => (
             <li className="tag-list__tag" key={tag}>{tag}</li>

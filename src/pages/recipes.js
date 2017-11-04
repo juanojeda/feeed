@@ -20,8 +20,8 @@ class RecipeList extends Component {
         <div className='allrecipes-container'>
           <IntroBox heading="Recipes" />
           <ContentBox>
-            <div className='container l-flex'>
-              {
+            <div className='container grid-x grid-margin-x'>
+            {
                 recipes.map((recipeData) => (
                   <RecipeCard key={recipeData.node.id} data={recipeData.node} />
                 ))
