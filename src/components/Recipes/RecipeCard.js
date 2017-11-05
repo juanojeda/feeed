@@ -19,21 +19,21 @@ class RecipeCard extends Component {
     const { slug } = fields;
 
     return (
-      <article className="recipe-card medium-6 cell grid-y" tabIndex="0">
-        <Link to={`recipes/${slug}`} className="cell">
-          <header className="recipe-card__header">
+      <Link to={`recipes/${slug}`} className="recipe-card medium-6 cell grid-y" tabIndex="0">
+        <div className="recipe-card__details cell">
+          <div className="recipe-card__header">
             <h3 className="recipe-card__title">{title}</h3>
             <small className="recipe-card__date">published on {moment(date).format('dddd, MMMM Do YYYY')}</small>
-          </header>
-          <section className="recipe-card__body">
+          </div>
+          <div className="recipe-card__body">
             <p>{blurb}</p>
-          </section>
-        </Link>
-        <footer className="cell recipe-card__footer grid-x">
+          </div>
+        </div>
+        <div className="cell recipe-card__footer grid-x">
           <TagList tags={tags} />
           <RecipeDifficulty difficulty={difficulty} />
-        </footer>
-      </article>
+        </div>
+      </Link>
     );
   }
 }

@@ -6,38 +6,38 @@
   background: $colour-grey-white;
   border-radius: get-radius(.5);
   box-shadow: 0 0 0 0 fade-out($colour-grey-black, .9);
+  box-shadow: none;
+  color: $colour-grey-black;
   cursor: pointer;
+  font-family: inherit;
+  font-weight: inherit;
   justify-content: space-between;
   margin-bottom: get-y(2);
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
   overflow: hidden;
+  padding: 0;
   position: relative;
   transition-duration: 100ms;
   transition-property: transform box-shadow;
   transition-timing-function: ease-out;
-
-  a {
-    box-shadow: none;
-    color: $colour-grey-black;
-    font-family: inherit;
-    font-weight: inherit;
-
-    &::before,
-    &::after {
-      content: none;
-    }
-
-    &:hover,
-    &:focus {
-      background: inherit;
-      z-index: initial;
-    }
+  
+  &::before,
+  &::after {
+    content: none;
   }
-
+  
   &:hover,
   &:focus {
-    box-shadow: 0 0 0 get-y(.25) $colour-action-transp;
+    background: $colour-grey-white;
+    color: inherit;
     outline: 0;
     transform: translateY(get-y(-0.25));
+    z-index: initial;
+  }
+  &:focus {
+    box-shadow: 0 0 0 get-y(.25) $colour-action-transp;  
   }
 
   &:active {
@@ -57,7 +57,7 @@
   }
 
   &__footer {
-    background: $colour-grey-white;
+    // background: $colour-grey-white;
     padding-bottom: get-y();
   }
 
