@@ -45,7 +45,10 @@
   }
 
   &__header {
-    padding: get-y(2) get-x(1) get-y(.5);
+    padding-bottom: get-y(.5);
+    padding-left: get-x(1);
+    padding-right: get-x(1);
+    padding-top: 0;
   }
 
   &__title {
