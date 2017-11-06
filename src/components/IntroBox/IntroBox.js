@@ -4,6 +4,8 @@ import PropTypes from 'prop-types';
 
 import Halftone from '../Image/Halftone';
 
+import isUndefined from 'lodash/isUndefined';
+
 import './_intro-box.scss';
 import '../../sass/_typography.scss';
 import '../../pages/_base.scss';
@@ -13,26 +15,30 @@ class IntroBox extends Component {
 
     const { heading, children, colours, imgUrl, imgHeight, imgWidth } = this.props;
 
+    const hasImg = !isUndefined(imgUrl) &&  !isUndefined(imgHeight) && !isUndefined(imgWidth);
+
     const themeStyles = {
       color: colours.colourFore,
       backgroundColor: colours.colourBg
     };
 
     return (
-      <div className="intro-box" css={themeStyles}>
-        <div className="grid-x grid-padding-x">
-          <div className="cell small-9 medium-7 large-10">
-            <Halftone
-              css={{zIndex: -1}}
-              {...colours}
-              imgUrl={imgUrl}
-              height={imgHeight}
-              width={imgWidth}
-              opacity={0.75} />
-              <div className="intro-box__body">
-                <h1 className="heading--h1">{heading}</h1>
-                {children}
-              </div>
+      <div className="intro-box grid-x grid-padding-x" css={themeStyles}>
+        <div className="cell small-9 medium-7 large-10">
+          {
+            hasImg ?
+              <Halftone
+                css={{zIndex: -1}}
+                {...colours}
+                imgUrl={imgUrl}
+                height={imgHeight}
+                width={imgWidth}
+                opacity={0.75} /> :
+                null
+          }
+          <div className="intro-box__body">
+            <h1 className="heading--h1">{heading}</h1>
+            {children}
           </div>
         </div>
       </div>

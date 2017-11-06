@@ -16,13 +16,16 @@
 
 html {
   font-size: .625rem;
+  overflow: hidden;
 }
+
 body {
   @include make-p1(false);
   background: $colour-grey-bg;
   color: $colour-grey-black;
   margin: 0;
   padding: 0;
+  overflow-y: auto;
 }
 
 .container {
