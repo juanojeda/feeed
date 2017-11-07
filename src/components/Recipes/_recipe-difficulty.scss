@@ -3,6 +3,7 @@
 @import '../../sass/typography';
 
 .recipe-difficulty {
+  margin-top: get-y(.5);
   &__container {
     background: $colour-grey-4;
     height: get-y(.5);
@@ -17,10 +18,14 @@
   }
 
   &__rating-text {
-    @include make-p3();
+    @include make-p3(false, false);
     color: $colour-grey-3;
-    padding: get-y(1) get-x(1) get-y(.5);
+    padding-bottom: 0;
+    padding-left: get-x(1);
+    padding-right: get-x(1);
+    padding-top: 0;
     text-align: right;
+    vertical-align: middle;
   }
 
   &--rating-1 {

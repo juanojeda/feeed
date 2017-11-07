@@ -8,7 +8,7 @@ class RecipeDifficulty extends Component {
     const { difficulty } = this.props;
     const difficultyClass = `recipe-difficulty__bar recipe-difficulty--rating-${difficulty}`;
     return (
-      <div className="recipe-difficulty">
+      <div className="recipe-difficulty cell shrink">
         <div className="recipe-difficulty__container">
           <div className={difficultyClass}></div>
         </div>

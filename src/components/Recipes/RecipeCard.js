@@ -19,7 +19,7 @@ class RecipeCard extends Component {
     const { slug } = fields;
 
     return (
-      <Link to={`recipes/${slug}`} className="recipe-card medium-4 cell grid-y" tabIndex="0">
+      <Link to={`recipes/${slug}`} className="recipe-card small-12 medium-6 large-4 cell grid-y" tabIndex="0">
         <div className="recipe-card__details cell">
           <div className="recipe-card__header">
             <h3 className="recipe-card__title">{title}</h3>

@@ -19,8 +19,9 @@
   overflow: hidden;
   padding: 0;
   position: relative;
+  transform: translateY(0);
   transition-duration: 100ms;
-  transition-property: transform box-shadow;
+  transition-property: transform, box-shadow;
   transition-timing-function: ease-out;
   
   &::before,
@@ -62,11 +63,14 @@
   }
 
   &__footer {
-    padding-bottom: get-y();
+    align-content: center;
+    border-top: 1px solid $colour-grey-bg;
+    padding-bottom: get-y(1);
+    padding-top: get-y(.5);
   }
 
   &__date {
-    @include make-p3();
+    @include make-p3(false, false);
     color: $colour-grey-3;
   }
 }
