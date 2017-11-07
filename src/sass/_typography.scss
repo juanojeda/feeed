@@ -4,231 +4,273 @@
 @import './fonts';
 @import './mixins';
 
-@mixin set-font-styles($size, $lineHeight: $size*1.2, $marginBottom: $lineHeight, $marginTop: 0) {
+$h-styles: (
+  h1: (
+    sml: (
+      font-size:      5rem,
+      line-height:    7rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+    med: (
+      font-size:      8.5rem,
+      line-height:    10.6rem,
+      margin-bottom:  7.1rem,
+      margin-top:     3.55rem,
+    ),
+    lrg: (
+      font-size:      10.8rem,
+      line-height:    13.3rem,
+      margin-bottom:  10.6rem,
+      margin-top:     5.3rem,
+    ),
+  ),
+  h2: (
+    sml: (
+      font-size:      4rem,
+      line-height:    5.3rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+    med: (
+      font-size:      5rem,
+      line-height:    7rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+    lrg: (
+      font-size:      7rem,
+      line-height:    9.8rem,
+      margin-bottom:  7.1rem,
+      margin-top:     3.55rem,
+    ),
+  ),
+  h3: (
+    sml: (
+      font-size:      2.5rem,
+      line-height:    3.5rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+    med: (
+      font-size:      4rem,
+      line-height:    5.3rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+    lrg: (
+      font-size:      5rem,
+      line-height:    7rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+  ),
+  h4: (
+    sml: (
+      font-size:      2.3rem,
+      line-height:    3.5rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+    med: (
+      font-size:      2.8rem,
+      line-height:    3.5rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+    lrg: (
+      font-size:      4rem,
+      line-height:    5.3rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+  ),
+  h5: (
+    sml: (
+      font-size:      2rem,
+      line-height:    3.5rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+    med: (
+      font-size:      2.3rem,
+      line-height:    3.5rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+    lrg: (
+      font-size:      2.8rem,
+      line-height:    3.5rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+  ),
+  h6: (
+    sml: (
+      font-size:      1.7rem,
+      line-height:    3.5rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+    med: (
+      font-size:      1.7rem,
+      line-height:    3.5rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+    lrg: (
+      font-size:      2rem,
+      line-height:    3.5rem,
+      margin-bottom:  3.5rem,
+      margin-top:     1.75rem,
+    ),
+  )
+);
+
+$p-styles: (
+  p1: (
+    sml: (
+      font-size:      1.6rem,
+      line-height:    2.8rem,
+      margin-bottom:  1.4rem,
+      margin-top:     1.4rem
+    ),
+    med: (
+      font-size:      1.8rem,
+      line-height:    2.8rem,
+      margin-bottom:  2.1rem,
+      margin-top:     2.1rem
+    ),
+    lrg: (
+      font-size:      2rem,
+      line-height:    3.5rem,
+      margin-bottom:  2.8rem,
+      margin-top:     2.8rem
+    )
+  ),
+  p2: (
+    sml: (
+      font-size:      1.2rem,
+      line-height:    2.1rem,
+      margin-bottom:  1.4rem,
+      margin-top:     1.4rem
+    ),
+    med: (
+      font-size:      1.4rem,
+      line-height:    2.8rem,
+      margin-bottom:  2.1rem,
+      margin-top:     2.1rem
+    ),
+    lrg: (
+      font-size:      1.6rem,
+      line-height:    2.8rem,
+      margin-bottom:  2.1rem,
+      margin-top:     2.1rem
+    )
+  ),
+  p3: (
+    sml: (
+      font-size:      1rem,
+      line-height:    1.4rem,
+      margin-bottom:  .7rem,
+      margin-top:     .7rem
+    ),
+    med: (
+      font-size:      1.2rem,
+      line-height:    2.1rem,
+      margin-bottom:  1.4rem,
+      margin-top:     1.4rem
+    ),
+    lrg: (
+      font-size:      1.2rem,
+      line-height:    2.1rem,
+      margin-bottom:  1.4rem,
+      margin-top:     1.4rem
+    )
+  )
+);
+
+@mixin set-font-styles($size, $line-height: $size*1.2, $margin-bottom: $line-height, $margin-top: 0, $use-margin-top: true, $use-margin-bottom: true) {
+
+  $bottom-margin: $margin-bottom;
+  $top-margin: $margin-top;
+
+  @if not $use-margin-bottom {
+    $bottom-margin: 0;
+  }
+
+  @if not $use-margin-top {
+    $top-margin: 0;
+  }
+
   font-size: $size;
-  line-height: $lineHeight;
-  margin-bottom: $marginBottom;
-  margin-top: $marginTop;
+  line-height: $line-height;
+  margin-bottom: $bottom-margin;
+  margin-top: $top-margin;
 }
 
-@mixin make-h1($useMarginBottom: true, $useMarginTop: true) {
-  $margin-bottom-sml: 3.5rem;
-  $margin-bottom-med: 7.1rem;
-  $margin-bottom-lrg: 10.6rem;
-  
-  $margin-top-sml: 1.75rem;
-  $margin-top-med: 3.55rem;
-  $margin-top-lrg: 5.3rem;
+@mixin get-type-style($type-size, $type-type, $use-margin-top, $use-margin-bottom) {
 
-  @if not $useMarginBottom {
-    $margin-bottom-sml: 0;
-    $margin-bottom-med: 0;
-    $margin-bottom-lrg: 0;
-  }
+  $sml-styles: map-get(map-get($type-type, $type-size), 'sml');
+  $med-styles: map-get(map-get($type-type, $type-size), 'med');
+  $lrg-styles: map-get(map-get($type-type, $type-size), 'lrg');
 
-  @if not $useMarginTop {
-    $margin-top-sml: 0;
-    $margin-top-med: 0;
-    $margin-top-lrg: 0;
+  @if map-has-key($type-type, $type-size) {
+    @include set-font-styles(map-get($sml-styles, 'font-size'), map-get($sml-styles, 'line-height'), map-get($sml-styles, 'margin-bottom'), map-get($sml-styles, 'margin-top'), $use-margin-top, $use-margin-bottom);
+
+    @include breakpoint($bp-medium) {
+      @include set-font-styles(map-get($med-styles, 'font-size'), map-get($med-styles, 'line-height'), map-get($med-styles, 'margin-bottom'), map-get($med-styles, 'margin-top'), $use-margin-top, $use-margin-bottom);
+    }
+    @include breakpoint($bp-large) {
+      @include set-font-styles(map-get($lrg-styles, 'font-size'), map-get($lrg-styles, 'line-height'), map-get($lrg-styles, 'margin-bottom'), map-get($lrg-styles, 'margin-top'), $use-margin-top, $use-margin-bottom);
+    }
   }
+  @else {
+    @warn 'Not a valid h-size';
+  }
+}
+
+@mixin make-h1($use-margin-bottom: true, $use-margin-top: true) {
   @include get-font(heading, bold);
-  @include set-font-styles(5rem, 7rem, $margin-bottom-sml, $margin-top-sml);
-
-  @include breakpoint($bp-medium) {
-    @include set-font-styles(8.5rem, 10.6rem, $margin-bottom-med, $margin-top-med);
-  }
-
-  @include breakpoint($bp-large) {
-    @include set-font-styles(10.8rem, 13.3rem, $margin-bottom-lrg, $margin-top-lrg);
-  }
+  @include get-type-style('h1', $h-styles, $use-margin-top, $use-margin-bottom);
 }
 
-@mixin make-h2($useMarginBottom: true, $useMarginTop: true) {
-  $margin-bottom-sml: 3.5rem;
-  $margin-bottom-med: 3.5rem;
-  $margin-bottom-lrg: 7.1rem;
-
-  $margin-top-sml: 1.75rem;
-  $margin-top-med: 1.75rem;
-  $margin-top-lrg: 3.55rem;
-  
-  @if not $useMarginBottom {
-    $margin-bottom-sml: 0;
-    $margin-bottom-med: 0;
-    $margin-bottom-lrg: 0;
-  }
-  
-  @if not $useMarginTop {
-    $margin-top-sml: 0;
-    $margin-top-med: 0;
-    $margin-top-lrg: 0;
-  }
-  @include get-font(heading, light);
-  @include set-font-styles(4rem, 5.3rem, $margin-bottom-sml, $margin-top-sml);
-
-  @include breakpoint($bp-medium) {
-    @include set-font-styles(5rem, 7rem, $margin-bottom-med, $margin-top-med);
-  }
-
-  @include breakpoint($bp-large) {
-    @include set-font-styles(7rem, 9.8rem, $margin-bottom-lrg, $margin-top-lrg);
-  }
+@mixin make-h2($use-margin-bottom: true, $use-margin-top: true) {
+  @include get-font(heading, light);  
+  @include get-type-style('h2', $h-styles, $use-margin-top, $use-margin-bottom);
 }
 
-@mixin make-h3($useMarginBottom: true, $useMarginTop: true) {
-  $margin-bottom-sml: 3.5rem;
-  $margin-bottom-med: 3.5rem;
-  $margin-bottom-lrg: 3.5rem;
-
-  $margin-top-sml: 1.75rem;
-  $margin-top-med: 1.75rem;
-  $margin-top-lrg: 1.75rem;
-  
-  @if not $useMarginBottom {
-    $margin-bottom-sml: 0;
-    $margin-bottom-med: 0;
-    $margin-bottom-lrg: 0;
-  }
-
-  @if not $useMarginTop {
-    $margin-top-sml: 0;
-    $margin-top-med: 0;
-    $margin-top-lrg: 0;
-  }
-  
-  @include get-font(heading, bold);
-  @include set-font-styles(2.5rem, 3.5rem, $margin-bottom-sml, $margin-top-sml);
-
-  @include breakpoint($bp-medium) {
-    @include set-font-styles(4rem, 5.3rem, $margin-bottom-med, $margin-top-med);
-  }
-
-  @include breakpoint($bp-large) {
-    @include set-font-styles(5rem, 7rem, $margin-bottom-lrg, $margin-top-lrg);
-  }
+@mixin make-h3($use-margin-bottom: true, $use-margin-top: true) {
+  @include get-font(heading, bold);  
+  @include get-type-style('h3', $h-styles, $use-margin-top, $use-margin-bottom);  
 }
 
-@mixin make-h4($useMarginBottom: true, $useMarginTop: true) {
-  $margin-bottom-sml: 3.5rem;
-  $margin-bottom-med: 3.5rem;
-  $margin-bottom-lrg: 3.5rem;
-  
-  $margin-top-sml: 1.75rem;
-  $margin-top-med: 1.75rem;
-  $margin-top-lrg: 1.75rem;
-  
-  @if not $useMarginBottom {
-    $margin-bottom-sml: 0;
-    $margin-bottom-med: 0;
-    $margin-bottom-lrg: 0;
-  }
-  
-  @if not $useMarginTop {
-    $margin-bottom-sml: 0;
-    $margin-bottom-med: 0;
-    $margin-bottom-lrg: 0;
-  }
-  @include get-font(heading, light);
-  @include set-font-styles(2.3rem, 3.5rem, $margin-bottom-sml, $margin-top-sml);
-
-  @include breakpoint($bp-medium) {
-    @include set-font-styles(2.8rem, 3.5rem, $margin-bottom-med, $margin-top-med);
-  }
-
-  @include breakpoint($bp-large) {
-    @include set-font-styles(4rem, 5.3rem, $margin-bottom-lrg, $margin-top-lrg);
-  }
+@mixin make-h4($use-margin-bottom: true, $use-margin-top: true) {
+  @include get-font(heading, light);  
+  @include get-type-style('h4', $h-styles, $use-margin-top, $use-margin-bottom);  
 }
 
-@mixin make-h5($useMarginBottom: true) {
-  $margin-bottom-sml: 3.5rem;
-  $margin-bottom-med: 3.5rem;
-  $margin-bottom-lrg: 3.5rem;
-  
-  @if not $useMarginBottom {
-    $margin-bottom-sml: 0;
-    $margin-bottom-med: 0;
-    $margin-bottom-lrg: 0;
-  }
-  @include get-font(heading, light);
-  @include set-font-styles(2rem, 3.5rem, $margin-bottom-sml);
-
-  @include breakpoint($bp-medium) {
-    @include set-font-styles(2.3rem, 3.5rem, $margin-bottom-med);
-  }
-
-  @include breakpoint($bp-large) {
-    @include set-font-styles(2.8rem, 3.5rem $margin-bottom-lrg);
-  }
+@mixin make-h5($use-margin-bottom: true, $use-margin-top: true) {
+  @include get-font(heading, light);  
+  @include get-type-style('h5', $h-styles, $use-margin-top, $use-margin-bottom);  
 }
 
-@mixin make-h6($useMarginBottom: true) {
-  $margin-bottom-sml: 3.5rem;
-  $margin-bottom-med: 3.5rem;
-  $margin-bottom-lrg: 3.5rem;
-  
-  @if not $useMarginBottom {
-    $margin-bottom-sml: 0;
-    $margin-bottom-med: 0;
-    $margin-bottom-lrg: 0;
-  }
-  @include get-font(heading, bold);
-  @include set-font-styles(1.7rem, 3.5rem, $margin-bottom-sml);
-
-  @include breakpoint($bp-medium) {
-    @include set-font-styles(1.7rem, 3.5rem, $margin-bottom-med);
-  }
-
-  @include breakpoint($bp-large) {
-    @include set-font-styles(2rem, 3.5rem, $margin-bottom-lrg);
-  }
+@mixin make-h6($use-margin-bottom: true, $use-margin-top: true) {
+  @include get-font(heading, bold);  
+  @include get-type-style('h6', $h-styles, $use-margin-top, $use-margin-bottom);  
 }
 
-@mixin make-p1($margin: true) {
-
-  $margin-small: 0;
-  $margin-medium: 0;
-  $margin-large: 0;
-  @if ($margin) {
-    $margin-small: 1.4rem;
-    $margin-medium: 2.1rem;
-    $margin-large: 2.8rem;
-  }
-
+@mixin make-p1($use-margin-bottom: true, $use-margin-top: true) {
   @include get-font(body, regular);
-  @include set-font-styles(1.6rem, 2.8rem, $margin-small);
-
-  @include breakpoint($bp-medium) {
-    @include set-font-styles(1.8rem, 2.8rem, $margin-medium);
-  }
-
-  @include breakpoint($bp-large) {
-    @include set-font-styles(2rem, 3.5rem, $margin-large);
-  }
+  @include get-type-style('p1', $p-styles, $use-margin-top, $use-margin-bottom);
 }
-@mixin make-p2() {
+@mixin make-p2($use-margin-bottom: true, $use-margin-top: true) {
   @include get-font(body, regular);
-  @include set-font-styles(1.2rem, 2.1rem);
-
-  @include breakpoint($bp-medium) {
-    @include set-font-styles(1.4rem, 2.8rem);
-  }
-
-  @include breakpoint($bp-large) {
-    @include set-font-styles(1.6rem, 2.8rem);
-  }
+  @include get-type-style('p2', $p-styles, $use-margin-top, $use-margin-bottom);
 }
-@mixin make-p3() {
+@mixin make-p3($use-margin-bottom: true, $use-margin-top: true) {
   @include get-font(body, regular);
-  @include set-font-styles(1rem, 1.4rem);
-
-  @include breakpoint($bp-medium) {
-    @include set-font-styles(1.2rem, 2.1rem);
-  }
-
-  @include breakpoint($bp-large) {
-    @include set-font-styles(1.2rem, 2.1rem);
-  }
+  @include get-type-style('p3', $p-styles, $use-margin-top, $use-margin-bottom);
 }
 
 .heading--h1 { @include make-h1(); }
