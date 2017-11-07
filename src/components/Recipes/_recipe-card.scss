@@ -36,6 +36,7 @@
     transform: translateY(get-y(-0.25));
     z-index: initial;
   }
+
   &:focus {
     box-shadow: 0 0 0 get-y(.25) $colour-action-transp;  
   }
@@ -56,15 +57,16 @@
   }
 
   &__body {
+    @include make-p2();
     padding: 0 get-x(1) get-y(2);
   }
 
   &__footer {
-    // background: $colour-grey-white;
     padding-bottom: get-y();
   }
 
   &__date {
+    @include make-p3();
     color: $colour-grey-3;
   }
 }

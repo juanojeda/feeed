@@ -50,7 +50,7 @@
     },
     {
       "id": "74yqp088nd",
-      "type": "type",
+      "type": "bright",
       "colors": [
         [
           "rgb(248,249,197)"
@@ -62,7 +62,7 @@
     },
     {
       "id": "vfitnj9h15",
-      "type": "type",
+      "type": "bright",
       "colors": [
         [
           "rgb(212,229,217)"
@@ -110,7 +110,7 @@
     },
     {
       "id": "bm23eyhjas",
-      "type": "type",
+      "type": "bright",
       "colors": [
         [
           "rgb(222,231,188)"
@@ -398,7 +398,7 @@
     },
     {
       "id": "hsrmiamre8",
-      "type": "type",
+      "type": "bright",
       "colors": [
         [
           "rgb(217,226,214)"

@@ -19,9 +19,15 @@ export function getColourTheme(themeId, isInverse = false) {
   }
 
   let colours = {
+    id: '',
+    type: '',
     colourBg: '',
     colourFore: '',
   };
+
+  colours.type = theme.type;
+  colours.id = theme.id;
+
   if (isInverse) {
     colours.colourBg = theme.colors[0][0];
     colours.colourFore = theme.colors[1][0];
@@ -36,7 +42,7 @@ export function getColourTheme(themeId, isInverse = false) {
 export function getRandomColourTheme(isInverse = false) {
 
   const allThemeKeys = getThemeKeys(colourThemes.favorites);
-  const themeIndex = random(0, allThemeKeys.length);
+  const themeIndex = random(0, allThemeKeys.length - 1);
   const themeKey = allThemeKeys[themeIndex];
 
   return getColourTheme(themeKey, isInverse);

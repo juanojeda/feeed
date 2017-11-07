@@ -1,6 +1,8 @@
 import React from 'react';
 
-import { getRandomColourTheme } from '../utils/khromaHelpers';
+import classNames from 'classnames';
+
+import { getRandomColourTheme, getColourTheme } from '../utils/khromaHelpers';
 
 import Link from 'gatsby-link';
 import IntroBox from '../components/IntroBox/IntroBox';
@@ -31,8 +33,28 @@ class Index extends React.Component {
   
   render() {
 
+    const { colours } = this.state;
+    const { colourFore, colourBg } = this.state.colours;
+    let bg = colourBg;
+    let fore = colourFore;
+
+    if (colours.type === 'bright') {
+      bg = colourFore;
+      fore = colourBg;
+    }
+
+    const containerStyles = {
+      overflow: 'hidden',
+      backgroundColor: bg,
+      color: fore
+    };
+
+    const classes = classNames('cell auto grid-x grid-margin-x', {
+      'm--inverse-content': colours.type !== 'bright'
+    })
+
     return (
-      <div className="cell auto grid-x grid-margin-x">
+      <div css={containerStyles} className={classes}>
         <div className="cell small-12 large-6">
           <IntroBox
             colours={this.state.colours}

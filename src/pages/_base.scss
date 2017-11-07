@@ -38,6 +38,13 @@ body {
   }
 }
 
+@mixin spotted-bg($dot-colour) {
+  background-image: radial-gradient(circle, $dot-colour 1px, transparent 0), radial-gradient(circle, $dot-colour 1px, transparent 0);
+  background-position: 1px 1px, 5px 5px;
+  background-repeat: repeat;
+  background-size: 8px 8px, 8px 8px;
+}
+
 a,
 .link {
   @include get-font(body, bold);
@@ -59,10 +66,7 @@ a,
   }
 
   @include add-pseudo(before) {
-    background-image: radial-gradient(circle, $colour-action-light 1px, transparent 0), radial-gradient(circle, $colour-action-light 1px, transparent 0);
-    background-position: 1px 1px, 5px 5px;
-    background-repeat: repeat;  
-    background-size: 8px 8px, 8px 8px;
+    @include spotted-bg($colour-action-light);
     height: 100%;
     left: 0;
     opacity: 0;
@@ -99,6 +103,16 @@ a,
       background: $colour-action-base;
       transition-delay: .5s;
     }
+  }
+
+  .m--inverse-content & {
+    color: $colour-grey-white;
+
+    &::before {
+      @include spotted-bg($colour-action-transp);    
+    }
+
+    
   }
 
   &--block {
