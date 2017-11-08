@@ -32,7 +32,6 @@
   &:hover,
   &:focus {
     background: $colour-grey-white;
-    color: inherit;
     outline: 0;
     transform: translateY(get-y(-0.25));
     z-index: initial;

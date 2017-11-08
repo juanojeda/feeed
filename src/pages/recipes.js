@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
+import { getRandomColourTheme } from '../utils/khromaHelpers';
+
 import IntroBox from '../components/IntroBox/IntroBox';
 import ContentBox from '../components/ContentBox/ContentBox';
 import RecipeCard from '../components/Recipes/RecipeCard';
@@ -10,15 +12,44 @@ import '../components/Recipes/_recipe-card.scss';
 
 class RecipeList extends Component {
 
-  recipeListHTML(){
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      colours: {
+        colourBg: '#000',
+        colourFore: '#fff',
+      }
+    };
   }
+
+  
+  componentWillMount() {
+    const themeColours = getRandomColourTheme();
+    this.setState({
+      colours: themeColours,
+    });
+  }
+  
   
   render() {
     const { edges: recipes } = this.props.data.allMarkdownRemark;
+
+    const { colours } = this.state;
+    const { colourFore, colourBg } = colours;
+
     return (
       <div>
         <div className='allrecipes-container'>
-          <IntroBox heading="Recipes" />
+          <IntroBox
+            mode='original'
+            heading='Recipes'
+            imgTitle='a food'
+            colours={colours}
+            imgUrl='https://instagram.fmel1-1.fna.fbcdn.net/t51.2885-15/e35/23099371_183012405608931_6835520879141584896_n.jpg'
+            imgHeight={1080}
+            imgWidth={1080}
+          />
           <ContentBox>
             <div className='container grid-x grid-margin-x'>
             {
@@ -34,10 +65,6 @@ class RecipeList extends Component {
     );
   }
 }
-
-RecipeList.propTypes = {
-
-};
 
 export default RecipeList;
 

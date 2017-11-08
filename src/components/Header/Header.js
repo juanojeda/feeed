@@ -35,7 +35,7 @@ class Header extends Component {
           <Logo />
           <Navigation
             className="navigation">
-            <Link className={`link ${this.getActiveLinkClass(path, 'food')}`} to="/food">Food</Link>
+            <Link className={`link ${this.getActiveLinkClass(path, 'food')}`} to="/recipes">Food</Link>
             <Link className={`link ${this.getActiveLinkClass(path, 'notes')}`} to="/notes">Notes</Link>
             <Link className={`link ${this.getActiveLinkClass(path, 'contact')}`} to="/contact">Find me</Link>
           </Navigation>

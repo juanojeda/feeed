@@ -10,21 +10,21 @@ class Halftone extends Component {
     const { colourBg, colourFore, imgUrl, opacity, width, height } = this.props;
 
     return (
-      <div className="image image--halftone">
+      <div className='image image--halftone'>
         <svg
           viewBox={`0 0 ${width} ${height}`}
-          preserveAspectRatio="xMidYMin slice"
-          className="image__bg"
+          preserveAspectRatio='xMidYMin slice'
+          className='image__bg'
           css={{
             backgroundColor: colourBg,
             opacity
           }}>
           <defs>
-            <mask id="svgImage">
+            <mask id='svgImage'>
               <image xlinkHref={imgUrl} />
             </mask>
           </defs>
-          <rect className="image__fill" width="100%" height="100%" fill={colourFore} mask="url(#svgImage)" />
+          <rect className='image__fill' x={width/2} y={height/2} width='100%' height='100%' transform={`translate(${width}, ${height})`} fill={colourFore} mask='url(#svgImage)' />
         </svg>
       </div>
     );

@@ -34,7 +34,7 @@ class Index extends React.Component {
   render() {
 
     const { colours } = this.state;
-    const { colourFore, colourBg } = this.state.colours;
+    const { colourFore, colourBg } = colours;
     let bg = colourBg;
     let fore = colourFore;
 
@@ -44,9 +44,12 @@ class Index extends React.Component {
     }
 
     const containerStyles = {
-      overflow: 'hidden',
       backgroundColor: bg,
-      color: fore
+      color: fore,
+      overflow: 'auto',
+      '@media (min-width: 1140px)': {
+        overflow: 'hidden',
+      },
     };
 
     const classes = classNames('cell auto grid-x grid-margin-x', {
@@ -57,7 +60,9 @@ class Index extends React.Component {
       <div css={containerStyles} className={classes}>
         <div className="cell small-12 large-6">
           <IntroBox
-            colours={this.state.colours}
+            mode='halftone'
+            imgTitle='A profile picture of Juan'
+            colours={colours}
             heading={`Hello, my name is Juan :)`}
             imgUrl={`${__PATH_PREFIX__}/images/profile.jpg`}
             imgHeight={613}
