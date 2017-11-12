@@ -20,7 +20,6 @@ module.exports = {
     "gatsby-plugin-sass",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-glamor",
-    "gatsby-plugin-react-next",
     {
       resolve: "gatsby-source-filesystem",
       options: {
