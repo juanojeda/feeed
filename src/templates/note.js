@@ -9,12 +9,12 @@ const propTypes = {
 class NoteTemplate extends React.Component {
   render() {
     const {markdownRemark: note} = this.props.data;
-    const { title, tags, content } = note;
-    const {  content: noteBody } = content;
+    const { html, frontmatter } = note;
+    const { date, id, tags, title } = frontmatter;
     return (
       <div>
         <h1>{title}</h1>
-        <div dangerouslySetInnerHTML={{__html__: noteBody }} />
+        <div dangerouslySetInnerHTML={{__html: html }} />
         <div>
           {
             tags.forEach((tag) => (<span>{tag}</span>))
@@ -29,8 +29,22 @@ NoteTemplate.propTypes = propTypes
 
 export default NoteTemplate
 
-// export const pageQuery = graphql`
-//   query noteByPath($path: String!) {
-//     markdownRemark(fields: { slug: {} })
-//   }
-// `
+export const pageQuery = graphql`
+  query noteById($PostID: String!) {
+    markdownRemark(
+      frontmatter: {
+        id: {
+          eq: $PostID
+        }
+      }
+    ) {
+      html
+      frontmatter {
+        title
+        id
+        tags
+        date
+      }
+    }
+  }
+`
