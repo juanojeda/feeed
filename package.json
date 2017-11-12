@@ -35,7 +35,7 @@
     "lodash-webpack-plugin": "^0.11.4",
     "moment": "^2.18.1",
     "prop-types": "^15.5.10",
-    "react": "^15.6.1",
+    "react": "^16.0.0",
     "react-disqus-comments": "^1.0.3",
     "react-dom": "^15.6.1",
     "react-headroom": "^2.1.6",
