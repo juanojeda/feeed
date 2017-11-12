@@ -24,7 +24,7 @@ class Halftone extends Component {
               <image xlinkHref={imgUrl} />
             </mask>
           </defs>
-          <rect className='image__fill' x={width/2} y={height/2} width='100%' height='100%' transform={`translate(${width}, ${height})`} fill={colourFore} mask='url(#svgImage)' />
+          <rect className='image__fill' width='100%' height='100%' transform={`translate(${width}, ${height})`} fill={colourFore} mask='url(#svgImage)' />
         </svg>
       </div>
     );
