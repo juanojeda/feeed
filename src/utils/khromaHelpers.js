@@ -12,13 +12,15 @@ function getThemeKeys(themes) {
 
 export function getColourTheme(themeId, isInverse = false) {
   const themes = colourThemes.favorites;
-  const theme = find(themes, {id: themeId});
+  const theme = find(themes, (themeIt) => {
+    return themeIt.id === themeId
+  });
 
   if (!theme) {
     return undefined;
   }
 
-  let colours = {
+  const colours = {
     id: '',
     type: '',
     colourBg: '',

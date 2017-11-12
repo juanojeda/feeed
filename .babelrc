@@ -1,3 +1,12 @@
 {
-    "plugins": ["lodash"]
+    "plugins": [
+        "lodash",
+        [
+            "babel-plugin-transform-react-remove-prop-types",
+            {
+                "mode": "remove",
+                "removeImport": true
+            }
+        ]
+    ]
 }
