@@ -77,10 +77,10 @@ class Contact extends Component {
               <div className="cell small-12 medium-8 large-10">
                 <h2 className="heading--h3">You wanna call me up?</h2>
                 <p className="heading--h5">Take my number down, it's...</p>
-                <Link to="https://www.instagram.com/foodandpuns/" className="link link--block">Instagram</Link>
-                <Link to="https://www.linkedin.com/in/juan-ojeda-a275b68/" className="link link--block">LinkedIn</Link>
-                <Link to="https://github.com/juanojeda" className="link link--block">Github</Link>
-                <Link to="https://codepen.io/juanojeda/" className="link link--block">Codepen</Link>
+                <a href="https://www.instagram.com/foodandpuns/" className="link link--block">Instagram</a>
+                <a href="https://www.linkedin.com/in/juan-ojeda-a275b68/" className="link link--block">LinkedIn</a>
+                <a href="https://github.com/juanojeda" className="link link--block">Github</a>
+                <a href="https://codepen.io/juanojeda/" className="link link--block">Codepen</a>
               </div>
             </div>
           </ContentBox>
