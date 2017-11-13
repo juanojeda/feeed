@@ -12,19 +12,19 @@ import ContentBox from '../components/ContentBox/ContentBox';
 import './_base.scss';
 import '../sass/_typography.scss';
 
-class Index extends Component {
+class Contact extends Component {
 
   constructor(props) {
     super(props);
-
+  
     this.state = {
       colours: {
         colourBg: '#000',
         colourFore: '#fff'
       }
-    }
+    };
   }
-  
+
   componentWillMount() {
     const themeColours = getRandomColourTheme();
     this.setState({
@@ -32,8 +32,9 @@ class Index extends Component {
     });
   }
   
-  render() {
 
+  render() {
+    
     const { colours } = this.state;
     const { colourFore, colourBg } = colours;
     let bg = colourBg;
@@ -45,8 +46,8 @@ class Index extends Component {
     }
 
     const containerStyles = {
-      backgroundColor: bg,
-      color: fore,
+      backgroundColor: fore,
+      color: bg,
       overflow: 'auto',
       '@media (min-width: 1140px)': {
         overflow: 'hidden',
@@ -54,7 +55,7 @@ class Index extends Component {
     };
 
     const classes = classNames('cell auto grid-x grid-margin-x', {
-      'm--inverse-content': colours.type !== 'bright'
+      'm--inverse-content': colours.type === 'bright'
     })
 
     return (
@@ -64,8 +65,8 @@ class Index extends Component {
             mode='halftone'
             imgTitle='A profile picture of Juan'
             colours={colours}
-            heading={`Hello, my name is Juan :)`}
-            imgUrl={`${__PATH_PREFIX__}/images/profile-01.jpg`}
+            heading={`Hey, how ya doin?`}
+            imgUrl={`${__PATH_PREFIX__}/images/profile-02.jpg`}
             imgHeight={613}
             imgWidth={920} />
         </div>
@@ -73,11 +74,13 @@ class Index extends Component {
           <ContentBox
             className=''>
             <div className='container grid-x'>
-              <div className="cell small-12 medium-6 large-8">
-                <h2 className="heading--h2">These are some of my hobbies</h2>
-                <Link to="/recipes" className="link link--block">Recipes &amp; food for thought</Link>
-                <Link to="/notes" className="link link--block">Thoughts on design &amp; development</Link>
-
+              <div className="cell small-12 medium-8 large-10">
+                <h2 className="heading--h3">You wanna call me up?</h2>
+                <p className="heading--h5">Take my number down, it's...</p>
+                <a href="https://www.instagram.com/foodandpuns/" className="link link--block">Instagram</a>
+                <a href="https://www.linkedin.com/in/juan-ojeda-a275b68/" className="link link--block">LinkedIn</a>
+                <a href="https://github.com/juanojeda" className="link link--block">Github</a>
+                <a href="https://codepen.io/juanojeda/" className="link link--block">Codepen</a>
               </div>
             </div>
           </ContentBox>
@@ -87,4 +90,4 @@ class Index extends Component {
   }
 }
 
-export default Index;
+export default Contact;

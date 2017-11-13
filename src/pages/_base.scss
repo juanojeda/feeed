@@ -24,6 +24,7 @@ body {
   background: $colour-grey-bg;
   color: $colour-grey-black;
   margin: 0;
+  overflow-x: hidden;
   overflow-y: auto;
   padding: 0;
 }
