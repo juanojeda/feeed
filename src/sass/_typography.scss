@@ -279,7 +279,7 @@ $p-styles: (
 
 .heading--h3 { @include make-h3(); }
 
-.heading--h4 { @include make-h3(); }
+.heading--h4 { @include make-h4(); }
 
 .heading--h5 { @include make-h5(); }
 
