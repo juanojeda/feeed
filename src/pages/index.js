@@ -25,11 +25,13 @@ class Index extends Component {
     }
   }
   
-  componentWillMount() {
-    const themeColours = getRandomColourTheme();
-    this.setState({
-      colours: themeColours,
-    });
+  componentDidMount() {
+    if (typeof window !== 'undefined'){
+      const themeColours = getRandomColourTheme();
+      this.setState({
+        colours: themeColours,
+      });
+    }
   }
   
   render() {
@@ -45,6 +47,8 @@ class Index extends Component {
     }
 
     const containerStyles = {
+      transitionDuration: '1s',
+      transitionProperty: 'background, color',
       backgroundColor: bg,
       color: fore,
       overflow: 'auto',

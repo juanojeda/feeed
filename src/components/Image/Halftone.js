@@ -16,6 +16,8 @@ class Halftone extends Component {
           preserveAspectRatio='xMidYMin slice'
           className='image__bg'
           css={{
+            transitionDuration: '1s',
+            transitionProperty: 'background',
             backgroundColor: colourBg,
             opacity
           }}>
@@ -24,7 +26,17 @@ class Halftone extends Component {
               <image xlinkHref={imgUrl} />
             </mask>
           </defs>
-          <rect className='image__fill' width='100%' height='100%' fill={colourFore} mask='url(#svgImage)' />
+          <rect
+            className='image__fill'
+            css={{
+              transitionDuration: '1s',
+              transitionProperty: 'fill, color'
+            }}
+            width='100%'
+            height='100%'
+            fill={colourFore}
+            mask='url(#svgImage)'
+          />
         </svg>
       </div>
     );
