@@ -9,9 +9,6 @@ class RecipeDifficulty extends Component {
     const difficultyClass = `recipe-difficulty__bar recipe-difficulty--rating-${difficulty}`;
     return (
       <div className="recipe-difficulty cell shrink">
-        <div className="recipe-difficulty__container">
-          <div className={difficultyClass}></div>
-        </div>
         <div className="recipe-difficulty__rating-text">
           Difficulty: {difficulty} / 5</div>
       </div>

@@ -4,18 +4,6 @@
 
 .recipe-difficulty {
   margin-top: get-y(.5);
-  &__container {
-    background: $colour-grey-4;
-    height: get-y(.5);
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 100%;
-  }
-
-  &__bar {
-    height: 100%;
-  }
 
   &__rating-text {
     @include make-p3(false, false);
@@ -26,30 +14,5 @@
     padding-top: 0;
     text-align: right;
     vertical-align: middle;
-  }
-
-  &--rating-1 {
-    background-color: $colour-rating-1;
-    width: 20%;
-  }
-
-  &--rating-2 {
-    background-color: $colour-rating-2;
-    width: 40%;
-  }
-
-  &--rating-3 {
-    background-color: $colour-rating-3;
-    width: 60%;
-  }
-
-  &--rating-4 {
-    background-color: $colour-rating-4;
-    width: 80%;
-  }
-
-  &--rating-5 {
-    background-color: $colour-rating-5;
-    width: 100%;
   }
 }

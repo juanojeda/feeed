@@ -1,13 +1,12 @@
-const path                = require('path');
-const _                   = require('lodash');
-const Promise             = require('bluebird');
-const slash               = require('slash');
+const path = require('path');
+const _ = require('lodash');
+const Promise = require('bluebird');
+const slash = require('slash');
 const webpackLodashPlugin = require('lodash-webpack-plugin');
-const fs                  = require('fs');
-const nodeHelpers         = require('./src/utils/nodeHelpers');
+const fs = require('fs');
+const nodeHelpers = require('./src/utils/nodeHelpers');
 
 exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
-
   const { createNodeField } = boundActionCreators;
 
   if (node.internal.type === 'MarkdownRemark') {
@@ -21,7 +20,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
   const { createPage } = boundActionCreators;
 
   return new Promise((resolve, reject) => {
-    const notePage   = path.resolve('src/templates/note.js');
+    const notePage = path.resolve('src/templates/note.js');
     const recipePage = path.resolve('src/templates/recipe.js');
     const tagPage = path.resolve('src/templates/tag.js');
     resolve(
@@ -52,13 +51,13 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
         }
 
         const tagSet = new Set();
-        
+
         result.data.allMarkdownRemark.edges.forEach(edge => {
           const slug = edge.node.fields.slug;
           const type = edge.node.frontmatter.type;
           const PostID = edge.node.frontmatter.id;
           let component;
-  
+
           if (type === 'recipe') {
             component = recipePage;
           }
@@ -70,7 +69,7 @@ exports.createPages = ({ graphql, boundActionCreators }) => {
               tagSet.add(tag);
             });
           }
-          
+
           createPage({
             path: `/${type}s/${slug}`, // pluralise the type
             component,
@@ -169,4 +168,12 @@ exports.modifyWebpackConfig = ({ config, stage }) => {
   if (stage === 'build-javascript') {
     config.plugin('Lodash', webpackLodashPlugin, null);
   }
+  config.merge({
+    resolve: {
+      alias: {
+        '@': path.resolve(__dirname, './')
+      }
+    }
+  });
+  return config;
 };
