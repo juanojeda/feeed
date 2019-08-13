@@ -33,7 +33,7 @@
     "gatsby-source-filesystem": "^1.4.2",
     "gatsby-transformer-remark": "^1.7.0",
     "html-entities": "^1.2.1",
-    "lodash": "^4.17.4",
+    "lodash": "^4.17.13",
     "lodash-webpack-plugin": "^0.11.4",
     "moment": "^2.18.1",
     "prop-types": "^15.5.10",
